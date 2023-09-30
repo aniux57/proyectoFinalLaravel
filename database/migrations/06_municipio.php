@@ -12,9 +12,9 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->boolean('estado');
-            $table->unsignedBigInteger('departamento_id');
+            $table->unsignedBigInteger('id_departamento');
 
-            $table->foreign('departamento_id')->references('id')->on('departamento');
+            $table->foreign('id_departamento')->references('id')->on('departamento');
         });
     }
 
