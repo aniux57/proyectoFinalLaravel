@@ -18,7 +18,7 @@ return new class extends Migration
             $table->boolean('estado');
             $table->unsignedBigInteger('id_municipio');
 
-            $table->foreign('id_municipio')->references('id')->on('sucursal');
+            $table->foreign('id_municipio')->references('id')->on('municipio');
         });
     }
 
