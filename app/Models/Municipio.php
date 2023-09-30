@@ -4,17 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Departamento extends Model
+class Municipio extends Model
 {
     use HasFactory;
 
     protected $fillable = ['nombre', 'estado'];
 
-    public function municipios(): HasMany
+    public function departamento(): BelongsTo
     {
-        return $this -> hasMany(Municipio::class);
+        return $this -> belongsTo(Departamento::class);
     }
 }
-?>
