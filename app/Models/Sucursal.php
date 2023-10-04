@@ -13,7 +13,7 @@ class Sucursal extends Model
 
     protected $fillable = ['nombre', 'direccion', 'referencias', 'telefonos', 'whatsapp', 'estado'];
 
-    public function sucursal(): BelongsTo
+    public function municipio(): BelongsTo
     {
         return $this -> belongsTo(Municipio::class);
     }

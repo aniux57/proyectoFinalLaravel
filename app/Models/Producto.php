@@ -33,4 +33,9 @@ class Producto extends Model
     {
         return $this -> hasMany(ProductoIngrediente::class);
     }
+
+    public function promociones(): HasMany
+    {
+        return $this -> hasMany(Promocion::class);
+    }
 }

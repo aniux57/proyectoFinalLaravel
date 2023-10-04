@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class TipoPromocion extends Model
 {
@@ -13,9 +13,9 @@ class TipoPromocion extends Model
     //atributos a llenar o acceder en la base de datos
     protected $fillable = ['nombre', 'descripcion', 'unidades', 'descuento', 'estado'];
 
-    public function promocion(): BelongsTo
+    public function promociones(): HasMany
     {
-        return $this -> belongsTo(Promocion::class);
+        return $this -> hasMany(Promocion::class);
     }
 }
 ?>
