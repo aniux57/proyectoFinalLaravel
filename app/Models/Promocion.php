@@ -4,16 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Municipio extends Model
+class Promocion extends Model
 {
     use HasFactory;
 
     protected $fillable = ['indefinida', 'fecha_inicio', 'fecha_fin', 'estado'];
 
-    public function tipoPromocion(): HasMany
+    public function tipoPromociones(): BelongsTo
     {
-        return $this -> hasMany(TipoPromocion::class);
+        return $this -> belongsTo(TipoPromocion::class);
+    }
+
+    public function producto(): BelongsTo
+    {
+        return $this -> belongsTo(Producto::class);
     }
 }
