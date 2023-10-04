@@ -11,5 +11,10 @@ class IngredienteActivo extends Model
 
     //atributos a llenar o acceder en la base de datos
     protected $fillable = ['nombre', 'descripcion', 'estado'];
+
+    public function productosIngredientes(): HasMany
+    {
+        return $this -> hasMany(ProductoIngrediente::class);
+    }
 }
 ?>

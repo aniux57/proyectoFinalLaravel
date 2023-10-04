@@ -13,7 +13,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_ingrediente');
             $table->unsignedBigInteger('id_producto');
 
-            $table->foreign('ingrediente')->references('id')->on('ingrediente_activo');
+            $table->foreign('id_ingrediente')->references('id')->on('ingrediente_activo');
             $table->foreign('id_producto')->references('id')->on('producto');
         });
     }
