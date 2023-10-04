@@ -12,7 +12,7 @@ class Promocion extends Model
 
     protected $fillable = ['indefinida', 'fecha_inicio', 'fecha_fin', 'estado'];
 
-    public function tipoPromociones(): BelongsTo
+    public function tipoPromocion(): BelongsTo
     {
         return $this -> belongsTo(TipoPromocion::class);
     }
