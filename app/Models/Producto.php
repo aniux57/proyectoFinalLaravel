@@ -24,9 +24,9 @@ class Producto extends Model
         return $this -> hasMany(CategoriaProducto::class);
     }
 
-    public function productoImagen(): HasMany
+    public function productosImagenes(): HasMany
     {
-        return $this->hasMany(ProductoImagen::class);
+        return $this-> hasMany(ProductoImagen::class);
     }
 
     public function productosIngredientes(): HasMany
