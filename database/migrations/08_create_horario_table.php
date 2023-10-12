@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('horario', function (Blueprint $table) {
             $table->id();
-            $table->string('dias');
+            $table->string('dias', 50);
             $table->time('hora_apertura');
             $table->time('hora_cierre');
             $table->boolean('esta_cerrado');
@@ -26,4 +26,3 @@ return new class extends Migration
         Schema::dropIfExists('horario');
     }
 };
-?>

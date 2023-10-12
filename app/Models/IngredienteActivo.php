@@ -9,7 +9,7 @@ class IngredienteActivo extends Model
 {
     use HasFactory;
 
-    //atributos a llenar o acceder en la base de datos
+    protected $table = 'ingrediente_activo';
     protected $fillable = ['nombre', 'descripcion', 'estado'];
 
     public function productosIngredientes(): HasMany
@@ -17,4 +17,3 @@ class IngredienteActivo extends Model
         return $this -> hasMany(ProductoIngrediente::class);
     }
 }
-?>

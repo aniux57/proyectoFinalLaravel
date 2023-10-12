@@ -10,7 +10,7 @@ class ProductoImagen extends Model
 {
     use HasFactory;
 
-    //atributos a llenar o acceder en la base de datos
+    protected $table = 'producto_imagen';
     protected $fillable = ['imagen', 'estado'];
 
     public function producto(): BelongsTo
@@ -18,4 +18,3 @@ class ProductoImagen extends Model
         return $this -> belongsTo(Producto::class);
     }
 }
-?>

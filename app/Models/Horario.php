@@ -10,6 +10,7 @@ class Horario extends Model
 {
     use HasFactory;
 
+    protected $table = 'horario';
     protected $fillable = ['dias', 'hora_apertura', 'hora_cierre', 'esta_cerrado', 'estado'];
 
     public function sucursal(): BelongsTo

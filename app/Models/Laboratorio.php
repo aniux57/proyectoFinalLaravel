@@ -10,7 +10,7 @@ class Laboratorio extends Model
 {
     use HasFactory;
 
-    //atributos a llenar o acceder en la base de datos
+    protected $table = 'laboratorio';
     protected $fillable = ['nombre', 'descripcion', 'estado'];
 
     public function productos(): HasMany
@@ -18,4 +18,3 @@ class Laboratorio extends Model
         return $this -> hasMany(Producto::class);
     }
 }
-?>
