@@ -10,6 +10,7 @@ class Promocion extends Model
 {
     use HasFactory;
 
+    protected $table = 'promocion';
     protected $fillable = ['indefinida', 'fecha_inicio', 'fecha_fin', 'estado'];
 
     public function tipoPromocion(): BelongsTo

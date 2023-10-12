@@ -10,7 +10,7 @@ class TipoPromocion extends Model
 {
     use HasFactory;
 
-    //atributos a llenar o acceder en la base de datos
+    protected $table = 'tipo_promocion';
     protected $fillable = ['nombre', 'descripcion', 'unidades', 'descuento', 'estado'];
 
     public function promociones(): HasMany
@@ -18,4 +18,3 @@ class TipoPromocion extends Model
         return $this -> hasMany(Promocion::class);
     }
 }
-?>

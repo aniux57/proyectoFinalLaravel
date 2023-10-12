@@ -10,11 +10,11 @@ return new class extends Migration
     {
         Schema::create('sucursal', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('direccion');
+            $table->string('nombre', 50);
+            $table->string('direccion', 100);
             $table->string('referencias');
-            $table->string('telefonos');
-            $table->string('whatsapp');
+            $table->string('telefonos', 40);
+            $table->string('whatsapp', 15);
             $table->boolean('estado');
             $table->unsignedBigInteger('id_municipio');
 
@@ -27,4 +27,3 @@ return new class extends Migration
         Schema::dropIfExists('sucursal');
     }
 };
-?>

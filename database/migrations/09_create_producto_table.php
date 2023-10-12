@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('producto', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo');
-            $table->string('nombre');
+            $table->string('codigo', 20);
+            $table->string('nombre', 100);
             $table->multiLineString('especificaciones');
             $table->double('precio_regular');
             $table->boolean('estado');
@@ -26,4 +26,3 @@ return new class extends Migration
         Schema::dropIfExists('producto');
     }
 };
-?>

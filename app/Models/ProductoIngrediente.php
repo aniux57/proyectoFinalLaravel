@@ -10,6 +10,8 @@ class ProductoIngrediente extends Model
 {
     use HasFactory;
 
+    protected $table = 'producto_ingrediente';
+
     public function categoria(): BelongsTo
     {
         return $this -> belongsTo(IngredienteActivo::class);

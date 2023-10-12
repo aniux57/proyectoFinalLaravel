@@ -11,6 +11,7 @@ class Sucursal extends Model
 {
     use HasFactory;
 
+    protected $table = 'sucursal';
     protected $fillable = ['nombre', 'direccion', 'referencias', 'telefonos', 'whatsapp', 'estado'];
 
     public function municipio(): BelongsTo

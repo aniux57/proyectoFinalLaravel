@@ -10,6 +10,8 @@ class Departamento extends Model
 {
     use HasFactory;
 
+    protected $table = 'departamento';
+
     protected $fillable = ['nombre', 'estado'];
 
     public function municipios(): HasMany
@@ -17,4 +19,3 @@ class Departamento extends Model
         return $this -> hasMany(Municipio::class);
     }
 }
-?>

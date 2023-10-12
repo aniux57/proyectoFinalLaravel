@@ -10,7 +10,7 @@ class Categoria extends Model
 {
     use HasFactory;
 
-    //atributos a llenar o acceder en la base de datos
+    protected $table = 'categoria';
     protected $fillable = ['nombre', 'descripcion', 'estado'];
 
     public function categoriasProductos(): HasMany
@@ -18,4 +18,3 @@ class Categoria extends Model
         return $this -> hasMany(CategoriaProducto::class);
     }
 }
-?>

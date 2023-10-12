@@ -11,6 +11,7 @@ class Municipio extends Model
 {
     use HasFactory;
 
+    protected $table = 'municipio';
     protected $fillable = ['nombre', 'estado'];
 
     public function departamento(): BelongsTo

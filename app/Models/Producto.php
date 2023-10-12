@@ -11,7 +11,7 @@ class Producto extends Model
 {
     use HasFactory;
 
-    //atributos a llenar o acceder en la base de datos
+    protected $table = 'producto';
     protected $fillable = ['codigo', 'nombre', 'especificaciones', 'precio_regular', 'estado'];
 
     public function laboratorio(): BelongsTo
