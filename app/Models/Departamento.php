@@ -14,6 +14,15 @@ class Departamento extends Model
 
     protected $fillable = ['nombre', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function municipios(): HasMany
     {
         return $this -> hasMany(Municipio::class);

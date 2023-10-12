@@ -10,7 +10,10 @@ class DepartamentosController extends Controller
 
     public function index()
     {
-        //
+        return view(
+            'console/sucursales/departamentos/list',
+            ['departamentos' => Departamento::all()]
+        );
     }
 
     public function create()

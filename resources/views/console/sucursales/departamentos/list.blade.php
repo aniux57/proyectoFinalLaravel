@@ -1,7 +1,22 @@
 @extends('layouts.console')
 
-@section('title', 'Sucursales')
+@section('title', 'Departamentos')
 
 @section('content')
-    <h1>Listado de Sucursales</h1>
+    <h1>Listado de Departamentos</h1>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Estado</th>
+        </tr>
+        @foreach ($departamentos as $departamento)
+            <tr>
+                <td>{{ $departamento -> nombre }}</td>
+                <td>{{ $departamento -> getEstado() }}</td>
+            </tr>
+        @endforeach
+    </table>
 @endsection
