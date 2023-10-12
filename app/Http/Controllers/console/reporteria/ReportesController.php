@@ -5,7 +5,7 @@ namespace App\Http\Controllers\console\reporteria;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ReportsController extends Controller
+class ReportesController extends Controller
 {
 
     public function index()
