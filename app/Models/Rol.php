@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Rol extends Model
@@ -15,6 +16,11 @@ class Rol extends Model
 
     public function permiso(): HasOne
     {
-        return $this->hasOne(Permiso::class);
+        return $this -> hasOne(Permiso::class);
+    }
+
+    public function usuarios(): HasMany
+    {
+        return $this -> hasMany(Usuario::class);
     }
 }
