@@ -12,6 +12,15 @@ class IngredienteActivo extends Model
     protected $table = 'ingrediente_activo';
     protected $fillable = ['nombre', 'descripcion', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function productosIngredientes(): HasMany
     {
         return $this -> hasMany(ProductoIngrediente::class);

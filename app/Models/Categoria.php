@@ -13,6 +13,15 @@ class Categoria extends Model
     protected $table = 'categoria';
     protected $fillable = ['nombre', 'descripcion', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function categoriasProductos(): HasMany
     {
         return $this -> hasMany(CategoriaProducto::class);

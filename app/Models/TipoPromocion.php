@@ -13,6 +13,15 @@ class TipoPromocion extends Model
     protected $table = 'tipo_promocion';
     protected $fillable = ['nombre', 'descripcion', 'unidades', 'descuento', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function promociones(): HasMany
     {
         return $this -> hasMany(Promocion::class);

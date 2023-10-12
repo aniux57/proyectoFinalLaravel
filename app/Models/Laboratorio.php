@@ -13,6 +13,15 @@ class Laboratorio extends Model
     protected $table = 'laboratorio';
     protected $fillable = ['nombre', 'descripcion', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function productos(): HasMany
     {
         return $this -> hasMany(Producto::class);

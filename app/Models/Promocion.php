@@ -13,13 +13,22 @@ class Promocion extends Model
     protected $table = 'promocion';
     protected $fillable = ['indefinida', 'fecha_inicio', 'fecha_fin', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function tipoPromocion(): BelongsTo
     {
-        return $this -> belongsTo(TipoPromocion::class);
+        return $this -> belongsTo(TipoPromocion::class, 'id_tipo_promocion');
     }
 
     public function producto(): BelongsTo
     {
-        return $this -> belongsTo(Producto::class);
+        return $this -> belongsTo(Producto::class, 'id_producto');
     }
 }

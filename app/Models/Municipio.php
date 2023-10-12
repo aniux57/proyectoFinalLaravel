@@ -14,9 +14,18 @@ class Municipio extends Model
     protected $table = 'municipio';
     protected $fillable = ['nombre', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function departamento(): BelongsTo
     {
-        return $this -> belongsTo(Departamento::class);
+        return $this -> belongsTo(Departamento::class, 'id_departamento');
     }
 
     public function sucursales(): HasMany

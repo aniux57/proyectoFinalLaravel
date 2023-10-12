@@ -14,6 +14,7 @@
             <th>Referencias</th>
             <th>Teléfonos</th>
             <th>Whatsapp</th>
+            <th>Municipio</th>
             <th>Estado</th>
         </tr>
         @foreach ($sucursales as $sucursal)
@@ -23,6 +24,7 @@
                 <td>{{ $sucursal -> referencias }}</td>
                 <td>{{ $sucursal -> telefonos }}</td>
                 <td>{{ $sucursal -> whatsapp }}</td>
+                <td>{{ $sucursal -> municipio -> nombre }}</td>
                 <td>{{ $sucursal -> getEstado() }}</td>
             </tr>
         @endforeach

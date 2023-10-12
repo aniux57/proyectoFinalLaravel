@@ -13,9 +13,17 @@ class Horario extends Model
     protected $table = 'horario';
     protected $fillable = ['dias', 'hora_apertura', 'hora_cierre', 'esta_cerrado', 'estado'];
 
-    public function sucursal(): BelongsTo
+    public function getEstado()
     {
-        return $this -> belongsTo(Sucursal::class);
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
     }
 
+    public function sucursal(): BelongsTo
+    {
+        return $this -> belongsTo(Sucursal::class, 'id_sucursal');
+    }
 }
