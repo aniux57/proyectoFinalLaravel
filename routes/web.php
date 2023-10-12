@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 // Rutas de la Consola
 
 Route::resource('admins', \App\Http\Controllers\console\administradores\AdminsController::class);
