@@ -3,5 +3,5 @@
 @section('title', 'Sucursales')
 
 @section('content')
-<h1>Creación de Sucursal</h1>
+    <h1>Creación de Sucursal</h1>
 @endsection

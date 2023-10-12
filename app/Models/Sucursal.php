@@ -14,6 +14,15 @@ class Sucursal extends Model
     protected $table = 'sucursal';
     protected $fillable = ['nombre', 'direccion', 'referencias', 'telefonos', 'whatsapp', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function municipio(): BelongsTo
     {
         return $this -> belongsTo(Municipio::class);
