@@ -13,8 +13,17 @@ class ProductoImagen extends Model
     protected $table = 'producto_imagen';
     protected $fillable = ['imagen', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function producto(): BelongsTo
     {
-        return $this -> belongsTo(Producto::class);
+        return $this -> belongsTo(Producto::class, 'id_producto');
     }
 }

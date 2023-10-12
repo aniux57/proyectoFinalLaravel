@@ -14,11 +14,11 @@ class ProductoIngrediente extends Model
 
     public function categoria(): BelongsTo
     {
-        return $this -> belongsTo(IngredienteActivo::class);
+        return $this -> belongsTo(IngredienteActivo::class, 'id_ingrediente');
     }
 
     public function producto(): BelongsTo
     {
-        return $this -> belongsTo(Producto::class);
+        return $this -> belongsTo(Producto::class, 'id_producto');
     }
 }

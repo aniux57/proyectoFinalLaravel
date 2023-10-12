@@ -25,7 +25,7 @@ class Sucursal extends Model
 
     public function municipio(): BelongsTo
     {
-        return $this -> belongsTo(Municipio::class);
+        return $this -> belongsTo(Municipio::class, 'id_municipio');
     }
 
     public function horarios(): HasMany

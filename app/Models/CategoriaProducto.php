@@ -14,11 +14,11 @@ class CategoriaProducto extends Model
 
     public function categoria(): BelongsTo
     {
-        return $this -> belongsTo(Categoria::class);
+        return $this -> belongsTo(Categoria::class, 'id_categoria');
     }
 
     public function producto(): BelongsTo
     {
-        return $this -> belongsTo(Producto::class);
+        return $this -> belongsTo(Producto::class, 'id_producto');
     }
 }

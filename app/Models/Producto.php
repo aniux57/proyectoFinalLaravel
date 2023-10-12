@@ -14,9 +14,18 @@ class Producto extends Model
     protected $table = 'producto';
     protected $fillable = ['codigo', 'nombre', 'especificaciones', 'precio_regular', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function laboratorio(): BelongsTo
     {
-        return $this -> belongsTo(Laboratorio::class);
+        return $this -> belongsTo(Laboratorio::class, 'id_laboratorio');
     }
 
     public function categoriasProductos(): HasMany
