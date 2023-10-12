@@ -17,4 +17,9 @@ class Categoria extends Model
     {
         return $this -> hasMany(CategoriaProducto::class);
     }
+
+    public function clienteFavoritos(): HasMany
+    {
+        return $this -> hasMany(ClienteFavorito::class);
+    }
 }

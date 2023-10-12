@@ -38,4 +38,9 @@ class Producto extends Model
     {
         return $this -> hasMany(Promocion::class);
     }
+
+    public function clienteFavoritos(): HasMany
+    {
+        return $this -> hasMany(ClienteFavorito::class);
+    }
 }

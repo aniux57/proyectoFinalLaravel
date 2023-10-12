@@ -17,4 +17,9 @@ class Cliente extends Model
     {
         return $this -> hasMany(ClienteVerificacion::class);
     }
+
+    public function clienteFavoritos(): HasMany
+    {
+        return $this -> hasMany(ClienteFavorito::class);
+    }
 }

@@ -17,4 +17,9 @@ class Laboratorio extends Model
     {
         return $this -> hasMany(Producto::class);
     }
+
+    public function clienteFavoritos(): HasMany
+    {
+        return $this -> hasMany(ClienteFavorito::class);
+    }
 }
