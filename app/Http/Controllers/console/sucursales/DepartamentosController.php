@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\console\sucursales;
 
 use App\Http\Controllers\Controller;
+use App\Models\Departamento;
 use Illuminate\Http\Request;
+
 
 class DepartamentosController extends Controller
 {
