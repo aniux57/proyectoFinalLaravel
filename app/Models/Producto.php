@@ -12,6 +12,7 @@ class Producto extends Model
     use HasFactory;
 
     protected $table = 'producto';
+    public $timestamps = false;
     protected $fillable = ['codigo', 'nombre', 'especificaciones', 'precio_regular', 'estado'];
 
     public function getEstado()

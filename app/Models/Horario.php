@@ -11,6 +11,7 @@ class Horario extends Model
     use HasFactory;
 
     protected $table = 'horario';
+    public $timestamps = false;
     protected $fillable = ['dias', 'hora_apertura', 'hora_cierre', 'esta_cerrado', 'estado'];
 
     public function getEstado()

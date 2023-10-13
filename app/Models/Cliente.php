@@ -11,6 +11,7 @@ class Cliente extends Model
     use HasFactory;
 
     protected $table = 'cliente';
+    public $timestamps = false;
     protected $fillable = ['nombres', 'recibir_noticias', 'recibir_promociones', 'recibir_fav_categoria', 'recibir_fav_laboratorio', 'recibir_fav_producto', 'verificado', 'estado'];
 
     public function clienteVerificaciones(): HasMany

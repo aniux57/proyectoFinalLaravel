@@ -11,6 +11,7 @@ class ClienteFavorito extends Model
     use HasFactory;
 
     protected $table = 'cliente_favorito';
+    public $timestamps = false;
     protected $fillable = ['estado'];
 
     public function cliente(): BelongsTo

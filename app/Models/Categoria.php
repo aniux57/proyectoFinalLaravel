@@ -11,6 +11,7 @@ class Categoria extends Model
     use HasFactory;
 
     protected $table = 'categoria';
+    public $timestamps = false;
     protected $fillable = ['nombre', 'descripcion', 'estado'];
 
     public function getEstado()

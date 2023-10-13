@@ -11,6 +11,7 @@ class ClienteVerificacion extends Model
     use HasFactory;
 
     protected $table = 'cliente_verificacion';
+    public $timestamps = false;
     protected $fillable = ['fecha_expiracion', 'codigo'];
 
     public function cliente(): BelongsTo

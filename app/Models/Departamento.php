@@ -11,7 +11,7 @@ class Departamento extends Model
     use HasFactory;
 
     protected $table = 'departamento';
-
+    public $timestamps = false;
     protected $fillable = ['nombre', 'estado'];
 
     public function getEstado()

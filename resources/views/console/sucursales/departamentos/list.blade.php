@@ -5,7 +5,9 @@
 @section('content')
     <h1>Listado de Departamentos</h1>
 
-    <br>
+    <a href="/departamentos/create">Crear Departamento</a>
+
+    <br><br>
 
     <table>
         <tr>

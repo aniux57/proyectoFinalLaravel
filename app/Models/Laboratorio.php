@@ -11,6 +11,7 @@ class Laboratorio extends Model
     use HasFactory;
 
     protected $table = 'laboratorio';
+    public $timestamps = false;
     protected $fillable = ['nombre', 'descripcion', 'estado'];
 
     public function getEstado()

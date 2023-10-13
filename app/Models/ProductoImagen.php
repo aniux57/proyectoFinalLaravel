@@ -11,6 +11,7 @@ class ProductoImagen extends Model
     use HasFactory;
 
     protected $table = 'producto_imagen';
+    public $timestamps = false;
     protected $fillable = ['imagen', 'estado'];
 
     public function getEstado()
