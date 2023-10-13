@@ -17,9 +17,9 @@
         </tr>
         @foreach ($categorias as $categoria)
             <tr>
-                <td>{{ $sucursal -> nombre }}</td>
-                <td>{{ $sucursal -> descripcion }}</td>
-                <td>{{ $sucursal -> getEstado() }}</td>
+                <td>{{ $categoria -> nombre }}</td>
+                <td>{{ $categoria -> descripcion }}</td>
+                <td>{{ $categoria -> getEstado() }}</td>
             </tr>
         @endforeach
     </table>
