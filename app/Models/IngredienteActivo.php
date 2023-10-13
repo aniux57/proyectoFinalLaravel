@@ -10,6 +10,7 @@ class IngredienteActivo extends Model
     use HasFactory;
 
     protected $table = 'ingrediente_activo';
+    public $timestamps = false;
     protected $fillable = ['nombre', 'descripcion', 'estado'];
 
     public function getEstado()

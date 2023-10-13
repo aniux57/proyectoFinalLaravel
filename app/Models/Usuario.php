@@ -12,6 +12,7 @@ class Usuario extends Model
     use HasFactory;
 
     protected $table = 'usuario';
+    public $timestamps = false;
     protected $fillable = ['email', 'password', 'estado'];
 
     public function administrador(): HasOne

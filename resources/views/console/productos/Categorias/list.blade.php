@@ -5,7 +5,9 @@
 @section('content')
     <h1>Listado de Categorias</h1>
 
-    <br>
+    <a href="/categorias/create">Crear Categoría</a>
+
+    <br><br>
 
     <table>
         <tr>

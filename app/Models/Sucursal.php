@@ -12,6 +12,7 @@ class Sucursal extends Model
     use HasFactory;
 
     protected $table = 'sucursal';
+    public $timestamps = false;
     protected $fillable = ['nombre', 'direccion', 'referencias', 'telefonos', 'whatsapp', 'estado'];
 
     public function getEstado()

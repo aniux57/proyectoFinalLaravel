@@ -10,5 +10,6 @@ class Administrador extends Model
     use HasFactory;
 
     protected $table = 'administrador';
+    public $timestamps = false;
     protected $fillable = ['nombre'];
 }

@@ -12,6 +12,7 @@ class Municipio extends Model
     use HasFactory;
 
     protected $table = 'municipio';
+    public $timestamps = false;
     protected $fillable = ['nombre', 'estado'];
 
     public function getEstado()

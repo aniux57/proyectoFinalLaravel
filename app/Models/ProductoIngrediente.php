@@ -11,6 +11,7 @@ class ProductoIngrediente extends Model
     use HasFactory;
 
     protected $table = 'producto_ingrediente';
+    public $timestamps = false;
 
     public function categoria(): BelongsTo
     {

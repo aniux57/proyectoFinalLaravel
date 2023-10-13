@@ -11,6 +11,7 @@ class Promocion extends Model
     use HasFactory;
 
     protected $table = 'promocion';
+    public $timestamps = false;
     protected $fillable = ['indefinida', 'fecha_inicio', 'fecha_fin', 'estado'];
 
     public function getEstado()

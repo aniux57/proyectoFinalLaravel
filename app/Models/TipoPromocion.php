@@ -11,6 +11,7 @@ class TipoPromocion extends Model
     use HasFactory;
 
     protected $table = 'tipo_promocion';
+    public $timestamps = false;
     protected $fillable = ['nombre', 'descripcion', 'unidades', 'descuento', 'estado'];
 
     public function getEstado()
