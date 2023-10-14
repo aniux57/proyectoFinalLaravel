@@ -5,7 +5,7 @@
 @section('content')
     <h1>Listado de Municipios</h1>
 
-    <a href="/municipios/create">Crear Departamento</a>
+    <a href="/municipios/create">Crear Municipio</a>
 
     <br><br>
 
