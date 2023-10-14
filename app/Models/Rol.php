@@ -15,6 +15,15 @@ class Rol extends Model
     public $timestamps = false;
     protected $fillable = ['nombre', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function permiso(): HasOne
     {
         return $this -> hasOne(Permiso::class);
