@@ -23,6 +23,15 @@ class Promocion extends Model
         }
     }
 
+    public function getIndefinida()
+    {
+        if ($this -> indefinida == 1) {
+            return "Indefinida";
+        } else {
+            return "Por tiempo limitado";
+        }
+    }
+
     public function tipoPromocion(): BelongsTo
     {
         return $this -> belongsTo(TipoPromocion::class, 'id_tipo_promocion');

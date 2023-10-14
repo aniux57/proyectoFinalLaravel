@@ -20,7 +20,7 @@
         </tr>
         @foreach ($promociones as $promocion)
             <tr>
-                <td>{{ $promocion -> indefinida }}</td>
+                <td>{{ $promocion -> getIndefinida() }}</td>
                 <td>{{ $promocion -> tipo_promocion -> nombre }}</td>
                 <td>{{ $promocion -> producto ->nombre }}</td>
                 <td>{{ $promocion -> fecha_inicio }}</td>
