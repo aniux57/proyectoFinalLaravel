@@ -5,7 +5,9 @@
 @section('content')
     <h1>Listado de Sucursales</h1>
 
-    <br>
+    <a href="/sucursales/create">Crear Sucursal</a>
+
+    <br><br>
 
     <table>
         <tr>
