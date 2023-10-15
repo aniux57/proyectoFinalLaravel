@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Departamento;
 use App\Models\Municipio;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class MunicipiosController extends Controller
 {
