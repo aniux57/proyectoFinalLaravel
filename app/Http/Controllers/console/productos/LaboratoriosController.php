@@ -19,12 +19,18 @@ class LaboratoriosController extends Controller
 
     public function create()
     {
-        //
+        return view('console/productos/Laboratorios/create');
     }
 
     public function store(Request $request)
     {
-        //
+        $laboratorio = new laboratorio();
+        $laboratorio -> nombre = $request->input('nombre');
+        $laboratorio -> descripcion = $request->input('descripcion');
+        $laboratorio -> estado = true;
+        $laboratorio -> save();
+
+        return redirect()->route('laboratorios.index');
     }
 
     public function edit(string $id)
