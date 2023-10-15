@@ -17,9 +17,9 @@
         </tr>
         @foreach ($laboratorios as $laboratorio)
             <tr>
-                <td>{{ $sucursal -> nombre }}</td>
-                <td>{{ $sucursal -> descripcion }}</td>
-                <td>{{ $sucursal -> getEstado() }}</td>
+                <td>{{ $laboratorio -> nombre }}</td>
+                <td>{{ $laboratorio -> descripcion }}</td>
+                <td>{{ $laboratorio -> getEstado() }}</td>
             </tr>
         @endforeach
     </table>
