@@ -19,12 +19,16 @@ class AdminsController extends Controller
 
     public function create()
     {
-        //
+        return view('console/administradores/admins/create');
     }
 
     public function store(Request $request)
     {
-        //
+        $administrador = new administrador();
+        $administrador -> nombre = $request->input('nombre');
+        $administrador -> save();
+
+        return redirect()->route('admins.index');
     }
 
     public function edit(string $id)
