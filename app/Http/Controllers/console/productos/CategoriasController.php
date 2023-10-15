@@ -19,12 +19,18 @@ class CategoriasController extends Controller
 
     public function create()
     {
-        //
+        return view('console/productos/Categorias/create');
     }
 
     public function store(Request $request)
     {
-        //
+        $categoria = new categoria();
+        $categoria -> nombre = $request->input('nombre');
+        $categoria -> descripcion = $request->input('descripcion');
+        $categoria -> estado = true;
+        $categoria -> save();
+
+        return redirect()->route('categorias.index');
     }
 
     public function edit(string $id)
