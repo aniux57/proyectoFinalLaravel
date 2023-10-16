@@ -1,25 +1,29 @@
-## Configurando el Key del Proyecto
+## Clonar el ambiente
+Es necesario tener algunas configuraciones iniciales para el proyecto, tales como configurar la Base de Datos, o tener la la configuración del correo electrónico y la llame para poder ejecutar el mismo. Para ello se debe ejecutar el siguiente comando:
 
-Es necesario configurar localmente la key de encripción del proyecto para poder ejecutarlo, para ellos ejecutar los siguientes comandos:
-
-- ```cp .env.example .env```
-- ```php artisan key:generate```
+```cp .env.example .env```
 
 ## Configuración de la Base de Datos
 
-En el archivo .env modificar la conexión a la base de datos
+Antes de generar la llave para el proyecto, es necesario configurar la conexion a la DB, para ello en el archivo .env modificar la conexión a la base de datos.
 
 ```
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=laravel
+DB_DATABASE=<db name>
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
+## Generar la llave
+
+Para generar la llave solo es necesario ejecutar el siguiente comando:
+
+```php artisan key:generate```
+
 ## Ejecución de las Migraciones
 
-Ejecutamos el comando
+Para poder correr las migraciones ejecutamos el siguiente comando:
 
 ```php artisan migrate```
 

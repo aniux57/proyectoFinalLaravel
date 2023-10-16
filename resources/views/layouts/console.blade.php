@@ -17,16 +17,6 @@
     @yield('styles')
 </head>
 <body>
-
-<!-- ============================================================== -->
-<!-- Preloader - style you can find in spinners.css -->
-<!-- ============================================================== -->
-<div class="preloader">
-    <div class="lds-ripple">
-        <div class="lds-pos"></div>
-        <div class="lds-pos"></div>
-    </div>
-</div>
 <!-- ============================================================== -->
 <!-- Main wrapper - style you can find in pages.scss -->
 <!-- ============================================================== -->
@@ -275,6 +265,11 @@
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
                     <h1 class="page-title">@yield('sub_title')</h1>
+                    <div class="ms-auto text-end">
+                        <nav aria-label="breadcrumb">
+                            @yield('action')
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
@@ -289,7 +284,15 @@
             <!-- Start Page Content -->
             <!-- ============================================================== -->
 
-            @yield('content')
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            @yield('content')
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- ============================================================== -->
             <!-- End PAge Content -->
