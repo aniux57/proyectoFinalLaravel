@@ -10,6 +10,6 @@ class ReportesController extends Controller
 
     public function index()
     {
-        //
+        return view('console/reporteria/reporteria');
     }
 }

@@ -1,10 +1,9 @@
-@extends('layouts.console')
+@extends('layouts.forms')
 
 @section('title', 'Categorias')
+@section('sub_title', 'Creación de Categorias')
 
 @section('content')
-    <h1>Creación de Categorias</h1>
-
     <form method="post" action="/categorias">
         @csrf
         <input type="text" id="nombre" name="nombre" placeholder="Nombre">
