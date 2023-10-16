@@ -28,17 +28,26 @@ class SucursalesController extends Controller
 
     public function store(Request $request)
     {
+        $municipio = $request -> input('id_municipio');
+        if ($municipio == -1) {
+            return back()
+                -> with('message', 'Es requerido seleccionar un municipio')
+                -> with('alert-class', 'alert-danger');
+        }
+
         $sucursal = new sucursal();
         $sucursal -> nombre = $request -> input('nombre');
         $sucursal -> direccion = $request -> input('direccion');
         $sucursal -> referencias = $request -> input('referencias');
         $sucursal -> telefonos = $request -> input('telefonos');
         $sucursal -> whatsapp = $request -> input('whatsapp');
-        $sucursal -> id_municipio = $request -> input('id_municipio');
+        $sucursal -> id_municipio = $municipio;
         $sucursal -> estado = true;
         $sucursal -> save();
 
-        return redirect() -> route('sucursales.index');
+        return redirect() -> route('sucursales.index')
+            ->with('message', 'Sucursal creada exitosamente.')
+            ->with('alert-class', 'alert-success');
     }
 
     public function edit(string $id)

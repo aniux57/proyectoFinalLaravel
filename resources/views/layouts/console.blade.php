@@ -288,6 +288,13 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
+
+                            @if(Session::has('message'))
+                                <div class="alert {{ Session::get('alert-class') }}" role="alert">
+                                    {{ Session::get('message') }}
+                                </div>
+                            @endif
+
                             @yield('content')
                         </div>
                     </div>
