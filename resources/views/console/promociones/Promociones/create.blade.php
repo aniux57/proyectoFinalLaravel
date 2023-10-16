@@ -5,9 +5,12 @@
 @section('content')
     <h1>Creación de Promociones</h1>
 
-    <form method="post" action="/Promociones">
+    <form method="post" action="/promociones">
         @csrf
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        
+        <input type="radio" id="indefinida" name="seleccion" value="indefinida">Indefinida
+        <input type="radio" id="tiempoLimitado" name="seleccion" value="limitada">Por Tiempo Limitado
+        
         <input type="date" id="fecha_inicio" name="fecha_inicio" placeholder="Fecha Inicio">
         <input type="date" id="fecha_fin" name="fecha_fin" placeholder="Fecha Fin">
 

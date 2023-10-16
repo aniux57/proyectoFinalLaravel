@@ -31,7 +31,14 @@ class PromocionesController extends Controller
     public function store(Request $request)
     {
         $promocion = new Promocion();
-        $promocion -> nombre = $request -> input('nombre');
+        $seleccion = $request->input('seleccion');
+
+        if ($seleccion === 'indefinida') {
+            $promocion -> indefinida = true;
+        } else {
+            $promocion -> indefinida = false;
+        }
+        
         $promocion -> fecha_inicio = $request -> input('fecha_inicio');
         $promocion -> fecha_fin = $request -> input('fecha_fin');
         $promocion -> id_tipo_promocion = $request -> input('id_tipo_promocion');
