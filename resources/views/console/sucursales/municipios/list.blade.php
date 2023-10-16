@@ -15,6 +15,7 @@
                     <th>Nombre</th>
                     <th>Departamento</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,12 @@
                         <td>{{ $municipio -> nombre }}</td>
                         <td>{{ $municipio -> departamento -> nombre }}</td>
                         <td>{{ $municipio -> getEstado() }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') municipios @endslot
+                                @slot('id') {{ $municipio -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

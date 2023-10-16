@@ -13,12 +13,19 @@
             <thead>
                 <tr>
                     <th>Nombre</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($administradores as $administrador)
                     <tr>
                         <td>{{ $administrador -> nombre }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') admins @endslot
+                                @slot('id') {{ $administrador -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

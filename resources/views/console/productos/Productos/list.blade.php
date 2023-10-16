@@ -17,6 +17,7 @@
                     <th>Especificaciones</th>
                     <th>Precio Regular</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,12 @@
                         <td>{{ $producto -> especificaciones }}</td>
                         <td>{{ $producto -> precio_regular }}</td>
                         <td>{{ $producto -> getEstado() }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') productos @endslot
+                                @slot('id') {{ $producto -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

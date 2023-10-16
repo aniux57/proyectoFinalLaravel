@@ -15,6 +15,7 @@
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,12 @@
                         <td>{{ $categoria -> nombre }}</td>
                         <td>{{ $categoria -> descripcion }}</td>
                         <td>{{ $categoria -> getEstado() }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') categorias @endslot
+                                @slot('id') {{ $categoria -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

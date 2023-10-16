@@ -18,6 +18,7 @@
                     <th>Fecha Inicio</th>
                     <th>Fecha Fin</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,6 +30,12 @@
                         <td>{{ $promocion -> fecha_inicio }}</td>
                         <td>{{ $promocion -> fecha_fin }}</td>
                         <td>{{ $promocion -> getEstado() }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') promociones @endslot
+                                @slot('id') {{ $promocion -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

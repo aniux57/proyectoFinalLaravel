@@ -14,6 +14,7 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,12 @@
                     <tr>
                         <td>{{ $departamento -> nombre }}</td>
                         <td>{{ $departamento -> getEstado() }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') departamentos @endslot
+                                @slot('id') {{ $departamento -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

@@ -15,6 +15,7 @@
                     <th>Nombre</th>
                     <th>Estado</th>
                     <th>Permiso</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,12 @@
                         <td>{{ $rol -> nombre }}</td>
                         <td>{{ $rol -> permiso -> id }}</td>
                         <td>{{ $rol -> getEstado() }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') roles @endslot
+                                @slot('id') {{ $rol -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
