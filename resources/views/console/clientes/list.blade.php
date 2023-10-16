@@ -20,6 +20,7 @@
                     <th>Recibir producto favorito</th>
                     <th>Verificado</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,6 +34,12 @@
                         <td>{{ $cliente -> getRecibirFavProducto() }}</td>
                         <td>{{ $cliente -> getVerificado() }}</td>
                         <td>{{ $cliente -> getEstado() }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') clientes @endslot
+                                @slot('id') {{ $cliente -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

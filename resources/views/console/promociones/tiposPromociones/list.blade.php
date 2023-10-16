@@ -17,6 +17,7 @@
                     <th>Unidades</th>
                     <th>Descuento</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,12 @@
                         <td>{{ $tipoPromocion -> unidades }}</td>
                         <td>{{ $tipoPromocion -> descuento }}</td>
                         <td>{{ $tipoPromocion -> getEstado() }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') tiposPromociones @endslot
+                                @slot('id') {{ $tipoPromocion -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

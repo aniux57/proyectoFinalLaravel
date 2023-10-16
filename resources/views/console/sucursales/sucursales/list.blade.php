@@ -19,6 +19,7 @@
                     <th>Whatsapp</th>
                     <th>Municipio</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,12 @@
                         <td>{{ $sucursal -> whatsapp }}</td>
                         <td>{{ $sucursal -> municipio -> nombre }}</td>
                         <td>{{ $sucursal -> getEstado() }}</td>
+                        <td>
+                            @component('components.console.btn_edit')
+                                @slot('controller') sucursales @endslot
+                                @slot('id') {{ $sucursal -> id }} @endslot
+                            @endcomponent
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
