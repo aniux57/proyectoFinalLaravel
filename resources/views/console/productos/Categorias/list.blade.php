@@ -1,9 +1,9 @@
-@extends('layouts.console')
+@extends('layouts.tables')
 
 @section('title', 'Categorias')
+@section('sub_title', 'Listado de Categorias')
 
 @section('content')
-    <h1>Listado de Categorias</h1>
 
     <a href="/categorias/create">Crear Categoría</a>
 
