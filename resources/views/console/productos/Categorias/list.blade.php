@@ -3,24 +3,29 @@
 @section('title', 'Categorias')
 @section('sub_title', 'Listado de Categorias')
 
+@section('action')
+<a class="btn btn-primary btn-lg" href="/categorias/create">Crear Categoría</a>
+@endsection
+
 @section('content')
-
-    <a href="/categorias/create">Crear Categoría</a>
-
-    <br><br>
-
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Estado</th>
-        </tr>
-        @foreach ($categorias as $categoria)
-            <tr>
-                <td>{{ $categoria -> nombre }}</td>
-                <td>{{ $categoria -> descripcion }}</td>
-                <td>{{ $categoria -> getEstado() }}</td>
-            </tr>
-        @endforeach
-    </table>
+    <div class="table-responsive">
+        <table id="zero_config" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($categorias as $categoria)
+                    <tr>
+                        <td>{{ $categoria -> nombre }}</td>
+                        <td>{{ $categoria -> descripcion }}</td>
+                        <td>{{ $categoria -> getEstado() }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection

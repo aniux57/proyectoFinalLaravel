@@ -1,26 +1,31 @@
-@extends('layouts.console')
+@extends('layouts.tables')
 
 @section('title', 'Laboratorios')
+@section('sub_title', 'Listado de Laboratorios')
+
+@section('action')
+<a class="btn btn-primary btn-lg" href="/laboratorios/create">Crear Laboratorio</a>
+@endsection
 
 @section('content')
-    <h1>Listado de Laboratorios</h1>
-
-    <a href="/laboratorios/create">Crear Categoría</a>
-
-    <br><br>
-
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Estado</th>
-        </tr>
-        @foreach ($laboratorios as $laboratorio)
-            <tr>
-                <td>{{ $laboratorio -> nombre }}</td>
-                <td>{{ $laboratorio -> descripcion }}</td>
-                <td>{{ $laboratorio -> getEstado() }}</td>
-            </tr>
-        @endforeach
-    </table>
+    <div class="table-responsive">
+        <table id="zero_config" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($laboratorios as $laboratorio)
+                    <tr>
+                        <td>{{ $laboratorio -> nombre }}</td>
+                        <td>{{ $laboratorio -> descripcion }}</td>
+                        <td>{{ $laboratorio -> getEstado() }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection
