@@ -10,6 +10,7 @@
         <form method="post" action="/tiposPromociones">
             @csrf
             <br>
+
             @component('components.console.input')
                 @slot('label') Nombre @endslot
                 @slot('name') nombre @endslot
@@ -21,17 +22,17 @@
                 @slot('label') Descripcion @endslot
                 @slot('name') descripcion @endslot
                 @slot('value') {{ Session::get('descripcion', '') }} @endslot
-                @slot('required') Required @endslot
+                @slot('required') @endslot
             @endcomponent
 
-            @component('components.console.input')
+            @component('components.console.number')
                 @slot('label') Unidades @endslot
                 @slot('name') unidades @endslot
                 @slot('value') {{ Session::get('unidades', '') }} @endslot
                 @slot('required') @endslot
             @endcomponent
 
-            @component('components.console.input')
+            @component('components.console.number')
                 @slot('label') Descuento @endslot
                 @slot('name') descuento @endslot
                 @slot('value') {{ Session::get('descuento', '') }} @endslot
