@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('tipo_promocion', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 50);
-            $table->string('descripcion');
+            $table->string('descripcion')->nullable();
             $table->Integer('unidades');
             $table->Integer('descuento');
-            $table->boolean('estado');
+            $table->boolean('estado')->default(true);
         });
     }
 

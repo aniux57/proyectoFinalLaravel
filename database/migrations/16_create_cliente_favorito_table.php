@@ -10,11 +10,11 @@ return new class extends Migration
     {
         Schema::create('cliente_favorito', function (Blueprint $table) {
             $table->id();
-            $table->boolean('estado');
-            $table->unsignedBigInteger('id_categoria');
-            $table->unsignedBigInteger('id_producto');
-            $table->unsignedBigInteger('id_laboratorio');
-            $table->unsignedBigInteger('id_cliente');
+            $table->boolean('estado')->default(true);
+            $table->unsignedBigInteger('id_categoria')->nullable();
+            $table->unsignedBigInteger('id_producto')->nullable();
+            $table->unsignedBigInteger('id_laboratorio')->nullable();
+            $table->unsignedBigInteger('id_cliente')->nullable();
 
             $table->foreign('id_categoria')->references('id')->on('categoria');
             $table->foreign('id_producto')->references('id')->on('producto');

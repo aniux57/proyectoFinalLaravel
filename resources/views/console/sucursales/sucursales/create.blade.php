@@ -13,30 +13,49 @@
             @component('components.console.input')
                 @slot('label') Nombre @endslot
                 @slot('name') nombre @endslot
+                @slot('value') {{ Session::get('nombre', '') }} @endslot
                 @slot('required') Required @endslot
             @endcomponent
 
             @component('components.console.input')
                 @slot('label') Direccion @endslot
                 @slot('name') direccion @endslot
-            @slot('required') Required @endslot
+                @slot('value') {{ Session::get('direccion', '') }} @endslot
+                @slot('required') Required @endslot
             @endcomponent
 
             @component('components.console.input')
                 @slot('label') Referencias @endslot
                 @slot('name') referencias @endslot
+                @slot('value') {{ Session::get('referencias', '') }} @endslot
                 @slot('required') @endslot
             @endcomponent
 
             @component('components.console.input')
                 @slot('label') Telefonos @endslot
                 @slot('name') telefonos @endslot
-                @slot('required') Required @endslot
+                @slot('value') {{ Session::get('telefonos', '') }} @endslot
+                @slot('required') @endslot
             @endcomponent
 
             @component('components.console.input')
                 @slot('label') WhatsApp @endslot
                 @slot('name') whatsapp @endslot
+                @slot('value') {{ Session::get('whatsapp', '') }} @endslot
+                @slot('required') @endslot
+            @endcomponent
+
+            @component('components.console.number')
+                @slot('label') Latitud @endslot
+                @slot('name') latitud @endslot
+                @slot('value') {{ Session::get('latitud', '') }} @endslot
+                @slot('required') Required @endslot
+            @endcomponent
+
+            @component('components.console.number')
+                @slot('label') Longitud @endslot
+                @slot('name') longitud @endslot
+                @slot('value') {{ Session::get('longitud', '') }} @endslot
                 @slot('required') Required @endslot
             @endcomponent
 

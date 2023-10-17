@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('municipio', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 80);
-            $table->boolean('estado');
+            $table->boolean('estado')->default(true);
             $table->unsignedBigInteger('id_departamento');
 
             $table->foreign('id_departamento')->references('id')->on('departamento');

@@ -12,11 +12,11 @@ return new class extends Migration
             $table->id();
             $table->string('email', 60);
             $table->string('password', 75);
-            $table->boolean('estado');
-            $table->unsignedBigInteger('id_administrador');
-            $table->unsignedBigInteger('id_cliente');
-            $table->unsignedBigInteger('id_rol');
-            $table->unsignedBigInteger('id_permiso');
+            $table->boolean('estado')->default(true);
+            $table->unsignedBigInteger('id_administrador')->nullable();
+            $table->unsignedBigInteger('id_cliente')->nullable();
+            $table->unsignedBigInteger('id_rol')->nullable();
+            $table->unsignedBigInteger('id_permiso')->nullable();
 
             $table->foreign('id_administrador')->references('id')->on('administrador');
             $table->foreign('id_cliente')->references('id')->on('cliente');

@@ -10,30 +10,30 @@ return new class extends Migration
     {
         Schema::create('permiso', function (Blueprint $table) {
             $table->id();
-            $table->boolean('roles_modulo');
+            $table->boolean('roles_modulo')->default(false);
             $table->string('roles_acciones', 50);
-            $table->boolean('admins_modulo');
+            $table->boolean('admins_modulo')->default(false);
             $table->string('admins_acciones', 50);
             $table->string('admins_params', 50);
-            $table->boolean('departamentos_modulo');
+            $table->boolean('departamentos_modulo')->default(false);
             $table->string('departamentos_acciones', 50);
-            $table->boolean('municipios_modulo');
+            $table->boolean('municipios_modulo')->default(false);
             $table->string('municipios_acciones', 50);
-            $table->boolean('sucursales_modulo');
+            $table->boolean('sucursales_modulo')->default(false);
             $table->string('sucursales_acciones', 50);
-            $table->boolean('categoria_modulo');
+            $table->boolean('categoria_modulo')->default(false);
             $table->string('categoria_acciones', 50);
-            $table->boolean('laboratorios_modulo');
+            $table->boolean('laboratorios_modulo')->default(false);
             $table->string('laboratorios_acciones', 50);
-            $table->boolean('productos_modulo');
+            $table->boolean('productos_modulo')->default(false);
             $table->string('productos_acciones', 50);
-            $table->boolean('clientes_modulo');
+            $table->boolean('clientes_modulo')->default(false);
             $table->string('clientes_acciones', 50);
-            $table->boolean('tipos_promocion_modulo');
+            $table->boolean('tipos_promocion_modulo')->default(false);
             $table->string('tipos_promocion_acciones', 50);
-            $table->boolean('promociones_modulo');
+            $table->boolean('promociones_modulo')->default(false);
             $table->string('promociones_acciones', 50);
-            $table->boolean('reportes_modulo');
+            $table->boolean('reportes_modulo')->default(false);
             $table->string('reportes_acciones', 100);
         });
     }
