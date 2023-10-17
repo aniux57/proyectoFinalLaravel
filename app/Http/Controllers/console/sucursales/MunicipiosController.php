@@ -49,11 +49,41 @@ class MunicipiosController extends Controller
 
     public function edit(string $id)
     {
-        //
+        $municipio = Municipio::find($id);
+
+        if ($municipio != null) {
+            return view(
+                'console/sucursales/municipios/edit',
+                [
+                    'departamentos' => Departamento::all(),
+                    'municipio' => $municipio
+                ]
+            );
+        } else {
+            return redirect() -> route('municipios.index')
+                ->with('message', 'El municipio que se desea editar no existe.')
+                ->with('alert-class', 'alert-danger');
+        }
     }
 
     public function update(Request $request, string $id)
     {
-        //
+        $municipio = Municipio::find($id);
+
+        if ($municipio != null) {
+
+            $municipio -> nombre = $request -> input('nombre');
+            $municipio -> id_departamento = $request -> input('id_departamento');
+            $municipio -> estado = $request -> input('estado');
+            $municipio -> save();
+
+            return redirect() -> route('municipios.index')
+                ->with('message', 'Municipio modificado exitosamente.')
+                ->with('alert-class', 'alert-success');
+        } else {
+            return redirect() -> route('municipios.index')
+                ->with('message', 'El municipio que se desea editar no existe.')
+                ->with('alert-class', 'alert-danger');
+        }
     }
 }
