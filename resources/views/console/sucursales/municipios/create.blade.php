@@ -10,6 +10,7 @@
         <form method="post" action="/municipios">
             @csrf
             <br>
+
             @component('components.console.input')
                 @slot('label') Nombre @endslot
                 @slot('name') nombre @endslot
