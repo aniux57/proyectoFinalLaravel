@@ -28,6 +28,13 @@ class MunicipiosController extends Controller
 
     public function store(Request $request)
     {
+        $departamento = $request -> input('id_departamento');
+        if ($departamento == -1) {
+            return back()
+                -> with('nombre', $request -> input('nombre'))
+                -> with('message', 'Es requerido seleccionar un departamento')
+                -> with('alert-class', 'alert-danger');
+        }
 
         $municipio = new Municipio();
         $municipio -> nombre = $request -> input('nombre');
@@ -35,7 +42,9 @@ class MunicipiosController extends Controller
         $municipio -> estado = true;
         $municipio -> save();
 
-        return redirect() -> route('municipios.index');
+        return redirect() -> route('municipios.index')
+            ->with('message', 'Municipio creada exitosamente.')
+            ->with('alert-class', 'alert-success');
     }
 
     public function edit(string $id)

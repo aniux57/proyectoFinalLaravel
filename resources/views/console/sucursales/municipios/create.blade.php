@@ -1,20 +1,42 @@
-@extends('layouts.console')
+@extends('layouts.forms')
 
-@section('title', 'Sucursales')
+@section('title', 'Municipios')
+@section('sub_title', 'Creación de Municipio')
 
 @section('content')
-    <h1>Creación de Sucursal</h1>
+<div class="row mb-3">
+    <div class="col-lg-1 ps-0"></div>
+    <div class="col-lg-10">
+        <form method="post" action="/municipios">
+            @csrf
+            <br>
+            @component('components.console.input')
+                @slot('label') Nombre @endslot
+                @slot('name') nombre @endslot
+                @slot('value') {{ Session::get('nombre', '') }} @endslot
+                @slot('required') Required @endslot
+            @endcomponent
 
-    <form method="post" action="/municipios">
-        @csrf
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            <div class="form-group row">
+                <label class="col-md-2" for="disabledTextInput">Departamento</label>
+                <div class="col-md-10">
+                    <select
+                        class="select2 form-select shadow-none"
+                        id="id_departamento"
+                        name="id_departamento"
+                        style="width: 100%; height:40px;"
+                    >
+                        <option value="-1" selected>Seleccionar</option>
+                        @foreach ($departamentos as $departamento)
+                            <option value="{{ $departamento -> id }}">{{ $departamento -> nombre }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
 
-        <select id="id_departamento" name="id_departamento">
-            @foreach ($departamentos as $departamento)
-                <option value="{{ $departamento -> id }}">{{ $departamento -> nombre }}</option>
-            @endforeach
-        </select>
-
-        <input type="submit" value="Subir">
-    </form>
+            @component('components.console.btn_create') @endcomponent
+        </form>
+    </div>
+    <div class="col-lg-1 ps-0"></div>
+</div>
 @endsection
