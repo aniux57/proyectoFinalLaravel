@@ -4,7 +4,7 @@
 @section('sub_title', 'Listado de Municipios')
 
 @section('action')
-<a class="btn btn-primary btn-lg" href="/municipios/create">Crear DeparMunicipiotamento</a>
+<a class="btn btn-primary btn-lg" href="/municipios/create">Crear Municipio</a>
 @endsection
 
 @section('content')
