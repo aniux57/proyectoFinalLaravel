@@ -30,7 +30,9 @@ class LaboratoriosController extends Controller
         $laboratorio -> estado = true;
         $laboratorio -> save();
 
-        return redirect()->route('laboratorios.index');
+        return redirect() -> route('laboratorios.index')
+            ->with('message', 'Laboratorio creado exitosamente.')
+            ->with('alert-class', 'alert-success');
     }
 
     public function edit(string $id)
