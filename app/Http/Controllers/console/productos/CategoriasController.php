@@ -31,6 +31,10 @@ class CategoriasController extends Controller
         $categoria -> save();
 
         return redirect()->route('categorias.index');
+
+        return redirect() -> route('categorias.index')
+            ->with('message', 'Categoria creada exitosamente.')
+            ->with('alert-class', 'alert-success');
     }
 
     public function edit(string $id)
