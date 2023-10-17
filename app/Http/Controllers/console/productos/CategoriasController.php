@@ -27,10 +27,7 @@ class CategoriasController extends Controller
         $categoria = new categoria();
         $categoria -> nombre = $request->input('nombre');
         $categoria -> descripcion = $request->input('descripcion');
-        $categoria -> estado = true;
         $categoria -> save();
-
-        return redirect()->route('categorias.index');
 
         return redirect() -> route('categorias.index')
             ->with('message', 'Categoria creada exitosamente.')
@@ -39,11 +36,38 @@ class CategoriasController extends Controller
 
     public function edit(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+
+        if ($categoria != null) {
+            return view(
+                'console/productos/Categorias/edit',
+                ['categoria' => $categoria]
+            );
+        } else {
+            return redirect() -> route('categorias.index')
+                ->with('message', 'La categoria que se desea editar no existe.')
+                ->with('alert-class', 'alert-danger');
+        }
     }
 
     public function update(Request $request, string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+
+        if ($categoria != null) {
+
+            $categoria -> nombre = $request->input('nombre');
+            $categoria -> descripcion = $request->input('descripcion');
+            $categoria -> estado = $request -> input('estado');
+            $categoria -> save();
+
+            return redirect() -> route('categorias.index')
+                ->with('message', 'Categoria modificada exitosamente.')
+                ->with('alert-class', 'alert-success');
+        } else {
+            return redirect() -> route('categorias.index')
+                ->with('message', 'La categoria que se desea editar no existe.')
+                ->with('alert-class', 'alert-danger');
+        }
     }
 }
