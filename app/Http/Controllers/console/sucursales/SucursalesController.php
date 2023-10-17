@@ -76,7 +76,6 @@ class SucursalesController extends Controller
                 ->with('message', 'La sucursal que se desea editar no existe.')
                 ->with('alert-class', 'alert-danger');
         }
-
     }
 
     public function update(Request $request, string $id)
