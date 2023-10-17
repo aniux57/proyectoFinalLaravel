@@ -11,6 +11,7 @@
             @csrf
             @method('PUT')
             <br>
+
             @component('components.console.input')
                 @slot('label') Nombre @endslot
                 @slot('name') nombre @endslot

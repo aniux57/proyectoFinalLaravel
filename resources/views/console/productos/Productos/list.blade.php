@@ -16,6 +16,7 @@
                     <th>Nombre</th>
                     <th>Especificaciones</th>
                     <th>Precio Regular</th>
+                    <th>Laboratorio</th>
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
@@ -27,6 +28,7 @@
                         <td>{{ $producto -> nombre }}</td>
                         <td>{{ $producto -> especificaciones }}</td>
                         <td>{{ $producto -> precio_regular }}</td>
+                        <td>{{ $producto -> laboratorio -> nombre }}</td>
                         <td>{{ $producto -> getEstado() }}</td>
                         <td>
                             @component('components.console.btn_edit')
