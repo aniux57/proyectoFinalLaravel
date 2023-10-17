@@ -32,7 +32,10 @@ class TiposPromocionesController extends Controller
         $tipo_promocion -> estado = true;
         $tipo_promocion -> save();
 
-        return redirect()->route('tiposPromociones.index');
+        return redirect() -> route('tiposPromociones.index')
+            ->with('message', 'Tipo de Promocion creada exitosamente.')
+            ->with('alert-class', 'alert-success');
+
     }
 
     public function edit(string $id)

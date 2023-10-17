@@ -1,17 +1,46 @@
-@extends('layouts.console')
+@extends('layouts.forms')
 
 @section('title', 'Tipos de Promociones')
+@section('sub_title', 'Creación de Tipo de Promocion')
 
 @section('content')
-    <h1>Creación de Tipos de Promociones</h1>
+<div class="row mb-3">
+    <div class="col-lg-1 ps-0"></div>
+    <div class="col-lg-10">
+        <form method="post" action="/tiposPromociones">
+            @csrf
+            <br>
+            @component('components.console.input')
+                @slot('label') Nombre @endslot
+                @slot('name') nombre @endslot
+                @slot('value') {{ Session::get('nombre', '') }} @endslot
+                @slot('required') Required @endslot
+            @endcomponent
 
-    <form method="post" action="/tiposPromociones">
-        @csrf
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-        <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion">
-        <input type="text" id="unidades" name="unidades" placeholder="Unidades">
-        <input type="text" id="descuento" name="descuento" placeholder="Descuento">
+            @component('components.console.input')
+                @slot('label') Descripcion @endslot
+                @slot('name') descripcion @endslot
+                @slot('value') {{ Session::get('descripcion', '') }} @endslot
+                @slot('required') Required @endslot
+            @endcomponent
 
-        <input type="submit" value="Crear">
-    </form>
+            @component('components.console.input')
+                @slot('label') Unidades @endslot
+                @slot('name') unidades @endslot
+                @slot('value') {{ Session::get('unidades', '') }} @endslot
+                @slot('required') @endslot
+            @endcomponent
+
+            @component('components.console.input')
+                @slot('label') Descuento @endslot
+                @slot('name') descuento @endslot
+                @slot('value') {{ Session::get('descuento', '') }} @endslot
+                @slot('required') @endslot
+            @endcomponent
+
+            @component('components.console.btn_create') @endcomponent
+        </form>
+    </div>
+    <div class="col-lg-1 ps-0"></div>
+</div>
 @endsection
