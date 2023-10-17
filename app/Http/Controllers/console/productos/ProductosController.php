@@ -55,11 +55,44 @@ class ProductosController extends Controller
 
     public function edit(string $id)
     {
-        //
+        $producto = Producto::find($id);
+
+        if ($producto != null) {
+            return view(
+                'console/productos/Productos/edit',
+                [
+                    'laboratorios' => Laboratorio::all(),
+                    'producto' => $producto
+                ]
+            );
+        } else {
+            return redirect() -> route('productos.index')
+                ->with('message', 'El producto que se desea editar no existe.')
+                ->with('alert-class', 'alert-danger');
+        }
     }
 
     public function update(Request $request, string $id)
     {
-        //
+        $producto = Producto::find($id);
+
+        if ($producto != null) {
+
+            $producto -> codigo = $request -> input('codigo');
+            $producto -> nombre = $request -> input('nombre');
+            $producto -> especificaciones = $request -> input('especificaciones');
+            $producto -> precio_regular = $request -> input('precio_regular');
+            $producto -> id_laboratorio = $request -> input('id_laboratorio');
+            $producto -> estado = $request -> input('estado');
+            $producto -> save();
+
+            return redirect() -> route('productos.index')
+                ->with('message', 'Producto modificado exitosamente.')
+                ->with('alert-class', 'alert-success');
+        } else {
+            return redirect() -> route('productos.index')
+                ->with('message', 'El producto que se desea editar no existe.')
+                ->with('alert-class', 'alert-danger');
+        }
     }
 }

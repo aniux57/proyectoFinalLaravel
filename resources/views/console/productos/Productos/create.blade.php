@@ -10,6 +10,7 @@
         <form method="post" action="/productos">
             @csrf
             <br>
+
             @component('components.console.input')
                 @slot('label') Código @endslot
                 @slot('name') codigo @endslot
