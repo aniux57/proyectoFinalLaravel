@@ -29,7 +29,9 @@ class DepartamentosController extends Controller
         $departamento -> estado = true;
         $departamento -> save();
 
-        return redirect()->route('departamentos.index');
+        return redirect()->route('departamentos.index')
+            ->with('message', 'Departamento creada exitosamente.')
+            ->with('alert-class', 'alert-success');
     }
 
     public function edit(string $id)
