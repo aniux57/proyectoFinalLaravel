@@ -10,6 +10,7 @@
         <form method="post" action="/categorias">
             @csrf
             <br>
+
             @component('components.console.input')
                 @slot('label') Nombre @endslot
                 @slot('name') nombre @endslot
@@ -21,7 +22,7 @@
                 @slot('label') Descripcion @endslot
                 @slot('name') descripcion @endslot
                 @slot('value') {{ Session::get('descripcion', '') }} @endslot
-                @slot('required') Required @endslot
+                @slot('required') @endslot
             @endcomponent
 
             @component('components.console.btn_create') @endcomponent
