@@ -39,7 +39,6 @@ class MunicipiosController extends Controller
         $municipio = new Municipio();
         $municipio -> nombre = $request -> input('nombre');
         $municipio -> id_departamento = $request -> input('id_departamento');
-        $municipio -> estado = true;
         $municipio -> save();
 
         return redirect() -> route('municipios.index')
