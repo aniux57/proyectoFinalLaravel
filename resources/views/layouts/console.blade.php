@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
 
+    @yield('styles')
+
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="{!! asset('matrix/dist/css/style.min.css') !!}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
-
-    @yield('styles')
 </head>
 <body>
 <!-- ============================================================== -->
@@ -336,8 +336,10 @@
 
 
 <!-- All Jquery -->
+
 <!-- ============================================================== -->
 <script src="{!! asset('matrix/assets/libs/jquery/dist/jquery.min.js') !!}"></script>
+
 <!-- Bootstrap tether Core JavaScript -->
 <script src="{!! asset('matrix/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') !!}"></script>
 <!-- slimscrollbar scrollbar JavaScript -->
@@ -351,5 +353,6 @@
 <script src="{!! asset('matrix/dist/js/custom.min.js') !!}"></script>
 
 @yield('scripts')
+
 </body>
 </html>
