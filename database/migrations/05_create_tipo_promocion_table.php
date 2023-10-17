@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nombre', 50);
             $table->string('descripcion')->nullable();
-            $table->Integer('unidades');
-            $table->Integer('descuento');
+            $table->Integer('unidades')->nullable();
+            $table->Integer('descuento')->nullable();
             $table->boolean('estado')->default(true);
         });
     }
