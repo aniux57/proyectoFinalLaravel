@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('laboratorio', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 100);
-            $table->string('descripcion');
-            $table->boolean('estado');
+            $table->string('descripcion')->nullable();
+            $table->boolean('estado')->default(true);
         });
     }
 

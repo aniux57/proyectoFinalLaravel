@@ -13,7 +13,7 @@ return new class extends Migration
             $table->boolean('indefinida');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
-            $table->boolean('estado');
+            $table->boolean('estado')->default(true);
             $table->unsignedBigInteger('id_tipo_promocion');
             $table->unsignedBigInteger('id_producto');
 

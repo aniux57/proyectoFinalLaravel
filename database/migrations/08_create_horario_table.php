@@ -14,7 +14,7 @@ return new class extends Migration
             $table->time('hora_apertura');
             $table->time('hora_cierre');
             $table->boolean('esta_cerrado');
-            $table->boolean('estado');
+            $table->boolean('estado')->default(true);
             $table->unsignedBigInteger('id_sucursal');
 
             $table->foreign('id_sucursal')->references('id')->on('sucursal');

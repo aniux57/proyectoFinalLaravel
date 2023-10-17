@@ -12,10 +12,12 @@ return new class extends Migration
             $table->id();
             $table->string('nombre', 50);
             $table->string('direccion', 100);
-            $table->string('referencias');
-            $table->string('telefonos', 40);
-            $table->string('whatsapp', 15);
-            $table->boolean('estado');
+            $table->string('referencias')->nullable();
+            $table->string('telefonos', 40)->nullable();
+            $table->string('whatsapp', 15)->nullable();
+            $table->Double('latitud');
+            $table->Double('longitud');
+            $table->boolean('estado')->default(true);
             $table->unsignedBigInteger('id_municipio');
 
             $table->foreign('id_municipio')->references('id')->on('municipio');

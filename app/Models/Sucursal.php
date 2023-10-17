@@ -13,7 +13,7 @@ class Sucursal extends Model
 
     protected $table = 'sucursal';
     public $timestamps = false;
-    protected $fillable = ['nombre', 'direccion', 'referencias', 'telefonos', 'whatsapp', 'estado'];
+    protected $fillable = ['nombre', 'direccion', 'referencias', 'telefonos', 'whatsapp', 'latitud', 'longitud', 'estado'];
 
     public function getEstado()
     {

@@ -12,9 +12,9 @@ return new class extends Migration
             $table->id();
             $table->string('codigo', 20);
             $table->string('nombre', 100);
-            $table->multiLineString('especificaciones');
-            $table->double('precio_regular');
-            $table->boolean('estado');
+            $table->longText('especificaciones');
+            $table->unsignedDouble('precio_regular');
+            $table->boolean('estado')->default(true);
             $table->unsignedBigInteger('id_laboratorio');
 
             $table->foreign('id_laboratorio')->references('id')->on('laboratorio');

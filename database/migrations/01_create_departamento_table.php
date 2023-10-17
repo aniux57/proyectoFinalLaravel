@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('departamento', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 80);
-            $table->boolean('estado');
+            $table->boolean('estado')->default(true);
         });
     }
 

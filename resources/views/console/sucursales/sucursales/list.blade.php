@@ -17,6 +17,8 @@
                     <th>Referencias</th>
                     <th>Teléfonos</th>
                     <th>Whatsapp</th>
+                    <th>Latitud</th>
+                    <th>Longitud</th>
                     <th>Municipio</th>
                     <th>Estado</th>
                     <th>Acciones</th>
@@ -30,6 +32,8 @@
                         <td>{{ $sucursal -> referencias }}</td>
                         <td>{{ $sucursal -> telefonos }}</td>
                         <td>{{ $sucursal -> whatsapp }}</td>
+                        <td>{{ $sucursal -> latitud }}</td>
+                        <td>{{ $sucursal -> longitud }}</td>
                         <td>{{ $sucursal -> municipio -> nombre }}</td>
                         <td>{{ $sucursal -> getEstado() }}</td>
                         <td>
