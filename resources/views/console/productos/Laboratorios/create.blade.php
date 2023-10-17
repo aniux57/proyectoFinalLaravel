@@ -21,7 +21,7 @@
                 @slot('label') Descripcion @endslot
                 @slot('name') descripcion @endslot
                 @slot('value') {{ Session::get('descripcion', '') }} @endslot
-                @slot('required') Required @endslot
+                @slot('required') @endslot
             @endcomponent
 
             @component('components.console.btn_create') @endcomponent
