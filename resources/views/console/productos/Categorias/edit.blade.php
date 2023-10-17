@@ -23,7 +23,7 @@
                 @slot('label') Descripcion @endslot
                 @slot('name') descripcion @endslot
                 @slot('value') {{ $categoria -> descripcion }} @endslot
-                @slot('required') Required @endslot
+                @slot('required') @endslot
             @endcomponent
 
             <div class="form-group row">
