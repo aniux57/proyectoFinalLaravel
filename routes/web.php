@@ -26,19 +26,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Rutas del Portal
+
 Route::get('/', [LandingPageController::class, 'index']);
 
 // Rutas de la Consola
 
-Route::resource('admins', AdminsController::class) -> except(['show']);
-Route::resource('roles', RolesController::class) -> except(['show']);
-Route::resource('clientes', ClientesController::class) -> except(['create', 'store', 'edit', 'update']);
-Route::resource('categorias', CategoriasController::class) -> except(['show']);
-Route::resource('laboratorios', LaboratoriosController::class) -> except(['show']);
-Route::resource('productos', ProductosController::class) -> except(['show']);
-Route::resource('promociones', PromocionesController::class) -> except(['show']);
-Route::resource('tiposPromociones', TiposPromocionesController::class) -> except(['show']);
-Route::resource('reportes', ReportesController::class) -> except(['show']);
-Route::resource('departamentos', DepartamentosController::class) -> except(['show']);
-Route::resource('municipios', MunicipiosController::class) -> except(['show']);
-Route::resource('sucursales', SucursalesController::class) -> except(['show']);
+Route::prefix('consola/')->group(function () {
+    Route::resource('admins', AdminsController::class) -> except(['show']);
+    Route::resource('roles', RolesController::class) -> except(['show']);
+    Route::resource('clientes', ClientesController::class) -> except(['create', 'store', 'edit', 'update']);
+    Route::resource('categorias', CategoriasController::class) -> except(['show']);
+    Route::resource('laboratorios', LaboratoriosController::class) -> except(['show']);
+    Route::resource('productos', ProductosController::class) -> except(['show']);
+    Route::resource('promociones', PromocionesController::class) -> except(['show']);
+    Route::resource('tiposPromociones', TiposPromocionesController::class) -> except(['show']);
+    Route::resource('reportes', ReportesController::class) -> except(['show']);
+    Route::resource('departamentos', DepartamentosController::class) -> except(['show']);
+    Route::resource('municipios', MunicipiosController::class) -> except(['show']);
+    Route::resource('sucursales', SucursalesController::class) -> except(['show']);
+});
+

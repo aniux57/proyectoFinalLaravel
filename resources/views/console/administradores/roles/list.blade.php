@@ -4,7 +4,7 @@
 @section('sub_title', 'Listado de Roles')
 
 @section('action')
-<a class="btn btn-primary btn-lg" href="/roles/create">Crear Rol</a>
+<a class="btn btn-primary btn-lg" href="/consola/roles/create">Crear Rol</a>
 @endsection
 
 @section('content')

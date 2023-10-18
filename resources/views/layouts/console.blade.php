@@ -32,7 +32,7 @@
                 <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->
-                <a class="navbar-brand" href="/reportes">
+                <a class="navbar-brand" href="/consola/reportes">
                     <!-- Logo icon -->
                     <b class="logo-icon ps-2">
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -103,7 +103,7 @@
                 <ul id="sidebarnav" class="pt-4">
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/reportes"
+                           href="/consola/reportes"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-window-restore"></i>
@@ -115,7 +115,7 @@
                 <ul id="sidebarnav" class="pt-4">
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/categorias"
+                           href="/consola/categorias"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-library-books"></i>
@@ -124,7 +124,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/laboratorios"
+                           href="/consola/laboratorios"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-hospital"></i>
@@ -133,7 +133,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/productos"
+                           href="/consola/productos"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-hexagon-multiple"></i>
@@ -145,7 +145,7 @@
                 <ul id="sidebarnav" class="pt-4">
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/tiposPromociones"
+                           href="/consola/tiposPromociones"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-format-list-bulleted-type"></i>
@@ -154,7 +154,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/promociones"
+                           href="/consola/promociones"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-creation"></i>
@@ -166,7 +166,7 @@
                 <ul id="sidebarnav" class="pt-4">
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/departamentos"
+                           href="/consola/departamentos"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-map"></i>
@@ -175,7 +175,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/municipios"
+                           href="/consola/municipios"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-map-marker-circle"></i>
@@ -184,7 +184,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/sucursales"
+                           href="/consola/sucursales"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-map-marker-radius"></i>
@@ -196,7 +196,7 @@
                 <ul id="sidebarnav" class="pt-4">
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/clientes"
+                           href="/consola/clientes"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-human-male-female"></i>
@@ -208,7 +208,7 @@
                 <ul id="sidebarnav" class="pt-4">
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/roles"
+                           href="/consola/roles"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-worker"></i>
@@ -217,7 +217,7 @@
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/admins"
+                           href="/consola/admins"
                            aria-expanded="false"
                         >
                             <i class="mdi mdi-account-settings-variant"></i>
@@ -319,8 +319,7 @@
         <!-- footer -->
         <!-- ============================================================== -->
         <footer class="footer text-center">
-            All Rights Reserved by Matrix-admin. Designed and Developed by <a
-                href="https://www.wrappixel.com">WrapPixel</a>.
+            All Rights Reserved by Universidad Mesoamericana.
         </footer>
         <!-- ============================================================== -->
         <!-- End footer -->

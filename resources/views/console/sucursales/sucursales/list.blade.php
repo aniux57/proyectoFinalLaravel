@@ -4,7 +4,7 @@
 @section('sub_title', 'Listado de Sucursales')
 
 @section('action')
-<a class="btn btn-primary btn-lg" href="/sucursales/create">Crear Sucursal</a>
+<a class="btn btn-primary btn-lg" href="/consola/sucursales/create">Crear Sucursal</a>
 @endsection
 
 @section('content')

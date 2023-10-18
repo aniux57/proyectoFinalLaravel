@@ -4,7 +4,7 @@
 @section('sub_title', 'Listado de Promociones')
 
 @section('action')
-<a class="btn btn-primary btn-lg" href="/promociones/create">Crear Promocion</a>
+<a class="btn btn-primary btn-lg" href="/consola/promociones/create">Crear Promocion</a>
 @endsection
 
 @section('content')

@@ -4,7 +4,7 @@
 @section('sub_title', 'Listado de Tipo de Promociones')
 
 @section('action')
-<a class="btn btn-primary btn-lg" href="/tiposPromociones/create">Crear Tipo de Promocion</a>
+<a class="btn btn-primary btn-lg" href="/consola/tiposPromociones/create">Crear Tipo de Promocion</a>
 @endsection
 
 @section('content')

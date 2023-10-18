@@ -4,7 +4,7 @@
 @section('sub_title', 'Listado de Departamentos')
 
 @section('action')
-<a class="btn btn-primary btn-lg" href="/departamentos/create">Crear Departamento</a>
+<a class="btn btn-primary btn-lg" href="/consola/departamentos/create">Crear Departamento</a>
 @endsection
 
 @section('content')

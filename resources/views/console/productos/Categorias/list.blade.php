@@ -4,7 +4,7 @@
 @section('sub_title', 'Listado de Categorias')
 
 @section('action')
-<a class="btn btn-primary btn-lg" href="/categorias/create">Crear Categoría</a>
+<a class="btn btn-primary btn-lg" href="/consola/categorias/create">Crear Categoría</a>
 @endsection
 
 @section('content')
