@@ -7,7 +7,7 @@
 
 @section('scripts')
     <script src="{!! asset('matrix/assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js') !!}"></script>
-    <script src="{!! asset('matrix/dist/js/pages/mask/mask.init.js') !!}"></script>
+    <script src="{!! asset('matrix/grafic/js/pages/mask/mask.init.js') !!}"></script>
     <script src="{!! asset('matrix/assets/libs/select2/dist/js/select2.full.min.js') !!}"></script>
     <script src="{!! asset('matrix/assets/libs/select2/dist/js/select2.min.js') !!}"></script>
     <script src="{!! asset('matrix/assets/libs/jquery-minicolors/jquery.minicolors.min.js') !!}"></script>
