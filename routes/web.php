@@ -29,6 +29,10 @@ use Illuminate\Support\Facades\Route;
 // Rutas del Portal
 
 Route::get('/', [LandingPageController::class, 'index']);
+Route::get('/sucursales', [\App\Http\Controllers\portal\SucursalesInfoController::class, 'index']);
+Route::get('/categoria/{id}', [\App\Http\Controllers\portal\CategoriasInfoController::class, 'index']);
+Route::get('/laboratorio/{id}', [\App\Http\Controllers\portal\LaboratoriosInfoController::class, 'index']);
+
 
 // Rutas de la Consola
 

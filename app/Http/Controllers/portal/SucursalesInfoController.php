@@ -5,18 +5,18 @@ namespace App\Http\Controllers\portal;
 use App\Http\Controllers\Controller;
 use App\Models\Categoria;
 use App\Models\Laboratorio;
-use App\Models\Producto;
+use App\Models\Sucursal;
 
-class LandingPageController extends Controller
+class SucursalesInfoController extends Controller
 {
 
     public function index() {
         return view(
-            'welcome',
+            'portal/sucursales',
             [
                 'categorias' => Categoria::all(),
                 'laboratorios' => Laboratorio::all(),
-                'productos' => Producto::all()
+                'sucursales' => Sucursal::all()
             ]
         );
     }
