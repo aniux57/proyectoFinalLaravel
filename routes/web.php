@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Mail\RecuperacionEmail;
+use App\Mail\CorreoCredenciales;
+use App\Mail\VerificacionEmail;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,7 @@ use App\Mail\RecuperacionEmail;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+$enlace = "https://www.google.com/";
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,7 +26,15 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/testroute', function () {
+Route::get('/correoRecuperacionContraseña', function () {
+    
+});
+
+Route::get('/correoRecibirCredenciales', function () {
+    
+});
+
+Route::get('/correoVerificacion', function () {
     
 });
 
@@ -42,3 +54,5 @@ Route::resource('municipios', \App\Http\Controllers\console\sucursales\Municipio
 Route::resource('sucursales', \App\Http\Controllers\console\sucursales\SucursalesController::class);
 
 Mail::to('hnosruizestrada@gmail.com')->send(new RecuperacionEmail());
+Mail::to('hnosruizestrada@gmail.com')->send(new CorreoCredenciales());
+Mail::to('hnosruizestrada@gmail.com')->send(new VerificacionEmail($enlace));    
