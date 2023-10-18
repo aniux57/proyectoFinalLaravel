@@ -13,7 +13,7 @@
     @yield('styles')
 
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
-    <link href="{!! asset('matrix/dist/css/style.min.css') !!}" rel="stylesheet" type="text/css" />
+    <link href="{!! asset('matrix/grafic/css/style.min.css') !!}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
 </head>
 <body>
@@ -37,14 +37,14 @@
                     <b class="logo-icon ps-2">
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                         <!-- Dark Logo icon -->
-                        <img src="{!! asset('matrix/assets/images/logo-icon.png') !!}" alt="homepage" class="light-logo" />
+                        <img src="{!! asset('images/logo-icon.png') !!}" alt="homepage" class="light-logo" />
 
                     </b>
                     <!--End Logo icon -->
                     <!-- Logo text -->
                     <span class="logo-text">
                                 <!-- dark Logo text -->
-                                <img src="{!! asset('matrix/assets/images/logo-text.png') !!}" alt="homepage" class="light-logo" />
+                                <img src="{!! asset('images/logo-text.png') !!}" alt="homepage" class="light-logo" />
 
                             </span>
                     <!-- Logo icon -->
@@ -346,11 +346,11 @@
 <script src="{!! asset('matrix/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js') !!}"></script>
 <script src="{!! asset('matrix/assets/extra-libs/sparkline/sparkline.js') !!}"></script>
 <!--Wave Effects -->
-<script src="{!! asset('matrix/dist/js/waves.js') !!}"></script>
+<script src="{!! asset('matrix/grafic/js/waves.js') !!}"></script>
 <!--Menu sidebar -->
-<script src="{!! asset('matrix/dist/js/sidebarmenu.js') !!}"></script>
+<script src="{!! asset('matrix/grafic/js/sidebarmenu.js') !!}"></script>
 <!--Custom JavaScript -->
-<script src="{!! asset('matrix/dist/js/custom.min.js') !!}"></script>
+<script src="{!! asset('matrix/grafic/js/custom.min.js') !!}"></script>
 
 @yield('scripts')
 
