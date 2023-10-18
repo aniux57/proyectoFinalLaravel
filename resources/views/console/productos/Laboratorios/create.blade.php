@@ -7,7 +7,7 @@
 <div class="row mb-3">
     <div class="col-lg-1 ps-0"></div>
     <div class="col-lg-10">
-        <form method="post" action="/laboratorios">
+        <form method="post" action="/consola/laboratorios">
             @csrf
             <br>
             @component('components.console.input')

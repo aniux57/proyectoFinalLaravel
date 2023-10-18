@@ -7,7 +7,7 @@
 <div class="row mb-3">
     <div class="col-lg-1 ps-0"></div>
     <div class="col-lg-10">
-        <form method="post" action="/sucursales/{{ $sucursal -> id }}">
+        <form method="post" action="/consola/sucursales/{{ $sucursal -> id }}">
             @csrf
             @method('PUT')
             <br>

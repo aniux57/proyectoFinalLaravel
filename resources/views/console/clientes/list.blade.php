@@ -3,10 +3,6 @@
 @section('title', 'Clientes')
 @section('sub_title', 'Listado de Clientes')
 
-@section('action')
-<a class="btn btn-primary btn-lg" href="/clientes/create">Crear Cliente</a>
-@endsection
-
 @section('content')
     <div class="table-responsive">
         <table id="zero_config" class="table table-striped table-bordered">

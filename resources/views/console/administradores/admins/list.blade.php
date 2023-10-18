@@ -4,7 +4,7 @@
 @section('sub_title', 'Listado de Administradores')
 
 @section('action')
-<a class="btn btn-primary btn-lg" href="/admins/create">Crear Administrador</a>
+<a class="btn btn-primary btn-lg" href="/consola/admins/create">Crear Administrador</a>
 @endsection
 
 @section('content')

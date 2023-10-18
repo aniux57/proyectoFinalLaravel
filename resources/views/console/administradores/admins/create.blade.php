@@ -5,7 +5,7 @@
 @section('content')
     <h1>Creación de Administradores</h1>
 
-    <form method="post" action="/admins">
+    <form method="post" action="/consola/admins">
         @csrf
         <input type="text" id="nombre" name="nombre" placeholder="Nombre">
 
