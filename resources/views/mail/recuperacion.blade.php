@@ -250,7 +250,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#ffffff" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" role="presentation">
                      <tr class="es-visible-simple-html-only" style="border-collapse:collapse">
-                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" spellcheck="false" data-ms-editor="true" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;font-size:18px">Te hemos generado una nueva contraseña para que puedas ingresar al sistema. Tu nueva contraseña es: 123k3134123asdf</p></td>
+                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" spellcheck="false" data-ms-editor="true" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;font-size:18px">Te hemos generado una nueva contraseña para que puedas ingresar al sistema. Tu nueva contraseña es: {{ $nuevacontraseña }} </p></td>
                      </tr>
                    </table></td>
                  </tr>

@@ -194,7 +194,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#ffffff" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" role="presentation">
                      <tr class="es-visible-simple-html-only" style="border-collapse:collapse">
-                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" spellcheck="false" data-ms-editor="true" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;font-size:18px">Te damos la bienvenida a la consola de Farmacia Hebreros, tus credenciales de acceso son<br>Usuario: admin@gmail.com<br>Contraseña: k2341kñ1243</p></td>
+                      <td class="es-m-txt-l" bgcolor="#ffffff" align="left" spellcheck="false" data-ms-editor="true" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;font-size:18px">Te damos la bienvenida a la consola de Farmacia Hebreros, tus credenciales de acceso son<br>Usuario: {{ $usuario }} <br>Contraseña: {{ $contraseña }} </p></td>
                      </tr>
                    </table></td>
                  </tr>

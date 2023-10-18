@@ -16,9 +16,14 @@ class CorreoCredenciales extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+
+    public string $usuario;
+    public string $contraseña;
+
+    public function __construct($usuario, $contraseña)
     {
-        //
+        $this->usuario = $usuario;
+        $this->contraseña = $contraseña;
     }
 
     /**
@@ -38,6 +43,7 @@ class CorreoCredenciales extends Mailable
     {
         return new Content(
             view: 'mail.Credenciales',
+            with: ['usuario' => $this->usuario, 'contraseña' => $this->contraseña]
         );
     }
 

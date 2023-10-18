@@ -16,9 +16,12 @@ class RecuperacionEmail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+
+    public string $nuevacontraseña;
+
+    public function __construct($nuevacontraseña)
     {
-        //
+        $this->nuevacontraseña = $nuevacontraseña;
     }
 
     /**
@@ -37,7 +40,8 @@ class RecuperacionEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.recuperacion'
+            view: 'mail.recuperacion',
+            with: ['nuevacontraseña' => $this->nuevacontraseña]
         );
     }
 
