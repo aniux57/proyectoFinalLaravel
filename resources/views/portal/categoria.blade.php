@@ -1,5 +1,6 @@
 @extends('layouts.portal')
 
+@section('title', 'Categorias')
 @section('categorias', 'active')
 
 @section('content')
