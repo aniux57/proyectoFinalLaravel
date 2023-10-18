@@ -7,18 +7,18 @@ use App\Models\Categoria;
 use App\Models\Laboratorio;
 use App\Models\Producto;
 
-class LandingPageController extends Controller
+class CategoriasInfoController extends Controller
 {
 
-    public function index() {
+    public function index(string $id) {
         return view(
-            'welcome',
+            'portal/categoria',
             [
                 'categorias' => Categoria::all(),
                 'laboratorios' => Laboratorio::all(),
+                'categoria' => Categoria::find($id),
                 'productos' => Producto::all()
             ]
         );
     }
-
 }
