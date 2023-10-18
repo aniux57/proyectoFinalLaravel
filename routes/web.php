@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Mail\RecuperacionEmail;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/testroute', function () {
+    
+});
+
 // Rutas de la Consola
 
 Route::resource('admins', \App\Http\Controllers\console\administradores\AdminsController::class);
@@ -35,3 +40,5 @@ Route::resource('reportes', \App\Http\Controllers\console\reporteria\ReportesCon
 Route::resource('departamentos', \App\Http\Controllers\console\sucursales\DepartamentosController::class);
 Route::resource('municipios', \App\Http\Controllers\console\sucursales\MunicipiosController::class);
 Route::resource('sucursales', \App\Http\Controllers\console\sucursales\SucursalesController::class);
+
+Mail::to('hnosruizestrada@gmail.com')->send(new RecuperacionEmail());
