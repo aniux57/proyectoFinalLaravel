@@ -17,21 +17,21 @@ class Usuario extends Model
 
     public function administrador(): HasOne
     {
-        return $this -> hasOne(Administrador::class);
+        return $this -> hasOne(Administrador::class, 'id_administrador');
     }
 
     public function cliente(): HasOne
     {
-        return $this -> hasOne(Cliente::class);
+        return $this -> hasOne(Cliente::class, 'id_cliente');
     }
 
     public function rol(): BelongsTo
     {
-        return $this -> belongsTo(Rol::class);
+        return $this -> belongsTo(Rol::class, 'id_cliente');
     }
 
     public function permiso(): HasOne
     {
-        return $this -> hasOne(Permiso::class);
+        return $this -> hasOne(Permiso::class, 'id_permiso');
     }
 }

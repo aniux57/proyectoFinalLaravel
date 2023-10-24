@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\ClientController;
 use App\Http\Controllers\console\administradores\AdminsController;
 use App\Http\Controllers\console\administradores\RolesController;
 use App\Http\Controllers\console\clientes\ClientesController;
@@ -36,7 +37,8 @@ Route::get('/laboratorio/{id}', [\App\Http\Controllers\portal\LaboratoriosInfoCo
 
 // Rutas de la Consola
 
-Route::prefix('consola/')->group(function () {
+Route::prefix('consola/')->group(function ()
+{
     Route::resource('admins', AdminsController::class) -> except(['show']);
     Route::resource('roles', RolesController::class) -> except(['show']);
     Route::resource('clientes', ClientesController::class) -> except(['create', 'store', 'edit', 'update']);
@@ -51,3 +53,9 @@ Route::prefix('consola/')->group(function () {
     Route::resource('sucursales', SucursalesController::class) -> except(['show']);
 });
 
+// Rutas del Backend
+
+Route::prefix('backend/') -> group(function ()
+{
+    Route::post('register', [ClientController::class, 'register']);
+});
