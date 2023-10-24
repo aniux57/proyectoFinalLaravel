@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Mail\RecuperacionEmail;
-use App\Mail\CorreoCredenciales;
-use App\Mail\VerificacionEmail;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +12,6 @@ use App\Mail\VerificacionEmail;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-$enlace = "https://www.google.com/";
-$usuario = "correogenerado@gmail.com";
-$contraseña = "contraseñagenerada";
-$nuevacontraseña = "nuevacontraseña";
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,21 +19,6 @@ Route::get('/', function () {
 
 Route::get('/welcome', function () {
     return view('welcome');
-});
-
-Route::get('/correoRecuperacionContraseña', function () use ($nuevacontraseña){
-    Mail::to('hnosruizestrada@gmail.com')->send(new RecuperacionEmail($nuevacontraseña));
-    return "Correo de recuperacion enviado";
-});
-
-Route::get('/correoRecibirCredenciales', function () use ($usuario,$contraseña){
-    Mail::to('hnosruizestrada@gmail.com')->send(new CorreoCredenciales($usuario, $contraseña)); 
-    return "Correo con credenciales enviado";
-});
-
-Route::get('/correoVerificacion', function () use ($enlace) {
-    Mail::to('hnosruizestrada@gmail.com')->send(new VerificacionEmail($enlace)); 
-    return "Correo de verificacion enviado";
 });
 
 // Rutas de la Consola
@@ -58,5 +35,3 @@ Route::resource('reportes', \App\Http\Controllers\console\reporteria\ReportesCon
 Route::resource('departamentos', \App\Http\Controllers\console\sucursales\DepartamentosController::class);
 Route::resource('municipios', \App\Http\Controllers\console\sucursales\MunicipiosController::class);
 Route::resource('sucursales', \App\Http\Controllers\console\sucursales\SucursalesController::class);
-
-   
