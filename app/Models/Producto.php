@@ -13,7 +13,7 @@ class Producto extends Model
 
     protected $table = 'producto';
     public $timestamps = false;
-    protected $fillable = ['codigo', 'nombre', 'especificaciones', 'precio_regular', 'imagen', 'estado'];
+    protected $fillable = ['codigo', 'nombre', 'fotografia', 'especificaciones', 'precio_regular', 'imagen', 'estado'];
 
     public function getEstado()
     {

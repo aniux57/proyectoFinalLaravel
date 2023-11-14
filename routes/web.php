@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\backend\ClientController;
+use App\Http\Controllers\backend\ProductController;
+use App\Http\Controllers\backend\LaboratoryController;
+use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\console\administradores\AdminsController;
 use App\Http\Controllers\console\administradores\RolesController;
 use App\Http\Controllers\console\clientes\ClientesController;
@@ -58,4 +61,11 @@ Route::prefix('consola/')->group(function ()
 Route::prefix('backend/') -> group(function ()
 {
     Route::post('register', [ClientController::class, 'register']);
+    Route::get('products', [ProductController::class, 'list']);
+    Route::get('product', [ProductController::class, 'detail']);
+    Route::get('labs', [LaboratoryController::class, 'list']);
+    Route::get('productsLab', [LaboratoryController::class, 'productsList']);
+    Route::get('categories', [CategoryController::class, 'list']);
+    Route::get('productsCat', [CategoryController::class, 'productsList']);
+
 });

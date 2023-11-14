@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre', 100);
             $table->string('descripcion')->nullable();
+            $table->string('fotografia',100);
             $table->boolean('estado')->default(true);
         });
     }
