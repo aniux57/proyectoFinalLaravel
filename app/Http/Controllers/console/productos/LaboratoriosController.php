@@ -27,6 +27,7 @@ class LaboratoriosController extends Controller
         $laboratorio = new laboratorio();
         $laboratorio -> nombre = $request->input('nombre');
         $laboratorio -> descripcion = $request->input('descripcion');
+        $laboratorio -> fotografia = $request->input('fotografia');
         $laboratorio -> save();
 
         return redirect() -> route('laboratorios.index')
@@ -57,6 +58,7 @@ class LaboratoriosController extends Controller
         if ($laboratorio != null) {
             $laboratorio -> nombre = $request->input('nombre');
             $laboratorio -> descripcion = $request->input('descripcion');
+            $laboratorio -> fotografia = $request->input('fotografia');
             $laboratorio -> estado = $request -> input('estado');
             $laboratorio -> save();
 

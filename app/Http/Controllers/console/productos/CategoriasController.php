@@ -27,6 +27,7 @@ class CategoriasController extends Controller
         $categoria = new categoria();
         $categoria -> nombre = $request->input('nombre');
         $categoria -> descripcion = $request->input('descripcion');
+        $categoria -> fotografia = $request->input('fotografia');
         $categoria -> save();
 
         return redirect() -> route('categorias.index')
@@ -58,6 +59,7 @@ class CategoriasController extends Controller
 
             $categoria -> nombre = $request->input('nombre');
             $categoria -> descripcion = $request->input('descripcion');
+            $categoria -> fotografia = $request->input('fotografia');
             $categoria -> estado = $request -> input('estado');
             $categoria -> save();
 

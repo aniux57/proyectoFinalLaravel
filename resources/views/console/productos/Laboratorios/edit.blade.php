@@ -26,6 +26,13 @@
                 @slot('required') @endslot
             @endcomponent
 
+            @component('components.console.img')
+                @slot('label') Fotografia @endslot
+                @slot('name') fotografia @endslot
+                @slot('value') {{ Session::get('fotografia', '') }} @endslot
+                @slot('required') Required @endslot
+            @endcomponent
+
             <div class="form-group row">
                 <label class="col-md-2" for="disabledTextInput">Estado</label>
                 <div class="col-md-10">

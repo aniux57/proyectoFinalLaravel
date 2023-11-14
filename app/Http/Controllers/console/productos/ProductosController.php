@@ -33,6 +33,7 @@ class ProductosController extends Controller
             return back()
                 -> with('codigo', $request -> input('codigo'))
                 -> with('nombre', $request -> input('nombre'))
+                -> with('fotografia', $request -> input('fotografia'))
                 -> with('especificaciones', $request -> input('especificaciones'))
                 -> with('precio_regular', $request -> input('precio_regular'))
                 -> with('id_laboratorio', $request -> input('id_laboratorio'))
@@ -43,6 +44,7 @@ class ProductosController extends Controller
         $producto = new producto();
         $producto -> codigo = $request -> input('codigo');
         $producto -> nombre = $request -> input('nombre');
+        $producto -> fotografia = $request -> input('fotografia');
         $producto -> especificaciones = $request -> input('especificaciones');
         $producto -> precio_regular = $request -> input('precio_regular');
         $producto -> id_laboratorio = $laboratorio;
@@ -80,6 +82,7 @@ class ProductosController extends Controller
 
             $producto -> codigo = $request -> input('codigo');
             $producto -> nombre = $request -> input('nombre');
+            $producto -> fotografia = $request -> input('fotografia');
             $producto -> especificaciones = $request -> input('especificaciones');
             $producto -> precio_regular = $request -> input('precio_regular');
             $producto -> id_laboratorio = $request -> input('id_laboratorio');
