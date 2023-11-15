@@ -64,7 +64,7 @@
                     </li>
                     <li class="dropdown"><a href="/categoriaslist" class="@yield('categoriaslist')">Categorías</a></li>
                     <li class="dropdown"><a href="/laboratorioslist" class="@yield('laboratorioslist')">Laboratorios</a></li>
-                    <li class="dropdown"><a href="" class="@yield('promociones')">Promociones</a></li>
+                    <li class="dropdown"><a href="/promocioneslist" class="@yield('promocioneslist')">Promociones</a></li>
                     <li class="dropdown"><a href="/sucursales" class="@yield('sucursales')">Sucursales</a></li>
                 </ul>
             </div>

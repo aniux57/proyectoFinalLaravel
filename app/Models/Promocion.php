@@ -12,7 +12,7 @@ class Promocion extends Model
 
     protected $table = 'promocion';
     public $timestamps = false;
-    protected $fillable = ['indefinida', 'fecha_inicio', 'fecha_fin', 'estado'];
+    protected $fillable = ['indefinida', 'fecha_inicio', 'fecha_fin', 'fotografia', 'estado'];
 
     public function getEstado()
     {

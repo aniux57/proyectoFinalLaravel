@@ -40,6 +40,8 @@ Route::get('/categoriaslist', [\App\Http\Controllers\portal\CategoriasInfoContro
 Route::get('/laboratorioslist', [\App\Http\Controllers\portal\LaboratoriosInfoController::class, 'laboratorioslist']);
 Route::get('/laboratorio/{id}', [\App\Http\Controllers\portal\LaboratoriosInfoController::class, 'index']);
 Route::get('/detalle/{id}', [\App\Http\Controllers\portal\CategoriasInfoController::class, 'detalle']);
+Route::get('/promocioneslist', [\App\Http\Controllers\portal\PromocionesInfoController::class, 'promocioneslist']);
+Route::get('/promo/{id}', [\App\Http\Controllers\portal\PromocionesInfoController::class, 'detalle']);
 
 // Rutas de la Consola
 
