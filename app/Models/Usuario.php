@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
     use HasFactory;
 
@@ -17,12 +17,12 @@ class Usuario extends Model
 
     public function administrador(): HasOne
     {
-        return $this -> hasOne(Administrador::class, 'id_administrador');
+        return $this -> hasOne(Administrador::class, 'id','id_administrador');
     }
 
     public function cliente(): HasOne
     {
-        return $this -> hasOne(Cliente::class, 'id_cliente');
+        return $this -> hasOne(Cliente::class, 'id', 'id_cliente');
     }
 
     public function rol(): BelongsTo
@@ -32,6 +32,6 @@ class Usuario extends Model
 
     public function permiso(): HasOne
     {
-        return $this -> hasOne(Permiso::class, 'id_permiso');
+        return $this -> hasOne(Permiso::class, 'id', 'id_permiso');
     }
 }
