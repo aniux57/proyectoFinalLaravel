@@ -30,6 +30,7 @@
                                     <img src="/images/{{ $promocion -> fotografia }}" alt="">
                                 </div>
                                 <a class="love" href="#"><i class="far fa-heart"></i></a>
+                                <div class="fetured-btn"><a href="/detallepromo/{{ $promocion -> id }}" class="@yield('detallepromo')">Ver Detalle</a></div>
                             </div>
                             <div class="fecure-containt">
                                 <h3> {{ $promocion->tipoPromocion->nombre }}</h3>
