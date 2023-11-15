@@ -21,15 +21,21 @@
                         </div>
                         <div class="zoom-containt-bottom">
                         @foreach($ingredientes as $ingrediente)
+                            <h3>Ingrediente Activo</h3>
                             <p>{{ $ingrediente -> nombre }}</p>
                         @endforeach
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-lg-12">
                     <div class="descriptionp">
                         <h3>Especificaciones</h3>
                         <p>{{ $producto -> especificaciones }}</p>
                     </div>
-                        </div>
-                    </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
