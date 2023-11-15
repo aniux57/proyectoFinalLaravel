@@ -24,6 +24,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6">
+                    <div class="header-left">
+                        <a href="/login">Iniciar Sesión</a>
+                    </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="headr-bar-right">
@@ -32,9 +35,11 @@
                         </div>
                     </div>
                     <div class="searchh ccfdf">
-                        <form id="search"><input type="text" placeholder="Search"><button type="submit"
-                                                                                          class="sbtn">Search Now</button>
-                            <a href="javascript:void(0)" class="srch"><i class="far fa-search"></i></a></form>
+                        <form id="search">
+                            <input type="text" placeholder="Search">
+                            <button type="submit" class="sbtn">Search Now</button>
+                            <a href="javascript:void(0)" class="srch"><i class="far fa-search"></i></a>
+                        </form>
                     </div>
                 </div>
             </div>
