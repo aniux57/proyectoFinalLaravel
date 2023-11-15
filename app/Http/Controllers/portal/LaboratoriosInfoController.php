@@ -11,13 +11,23 @@ class LaboratoriosInfoController extends Controller
 {
 
     public function index(string $id) {
+        $laboratorio = Laboratorio::find($id);
+        $productos = Producto::where('id_laboratorio', $id)->get();
+    
         return view(
             'portal/laboratorio',
             [
-                'categorias' => Categoria::all(),
-                'laboratorios' => Laboratorio::all(),
-                'laboratorio' => Laboratorio::find($id),
-                'productos' => Producto::where('id_laboratorio', $id)->get()
+                'laboratorio' => $laboratorio,
+                'productos' => $productos
+            ]
+        );
+    }
+
+    public function laboratorioslist() {
+        return view(
+            'portal/laboratorioslist',
+            [
+                'laboratorios' => Laboratorio::all()
             ]
         );
     }

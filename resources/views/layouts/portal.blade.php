@@ -57,22 +57,8 @@
                     <li class="dropdown ">
                         <a href="/" class="@yield('inicio')">Inicio</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="" class="@yield('categorias')">Categorías</a><i class="fa fa-chevron-down"></i>
-                        <ul class="dropdown-submenu">
-                            @foreach ($categorias as $categoria)
-                            <li><a href="/categoria/{{ $categoria -> id }}">{{ $categoria -> nombre }}</a></li>
-                            @endforeach
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="" class="@yield('laboratorios')">Laboratorios</a><i class="fa fa-chevron-down"></i>
-                        <ul class="dropdown-submenu">
-                            @foreach ($laboratorios as $laboratorio)
-                            <li><a href="/laboratorio/{{ $laboratorio -> id }}">{{ $laboratorio -> nombre }}</a></li>
-                            @endforeach
-                        </ul>
-                    </li>
+                    <li class="dropdown"><a href="/categoriaslist" class="@yield('categoriaslist')">Categorías</a></li>
+                    <li class="dropdown"><a href="/laboratorioslist" class="@yield('laboratorioslist')">Laboratorios</a></li>
                     <li class="dropdown"><a href="" class="@yield('promociones')">Promociones</a></li>
                     <li class="dropdown"><a href="/sucursales" class="@yield('sucursales')">Sucursales</a></li>
                 </ul>

@@ -35,6 +35,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LandingPageController::class, 'index']);
 Route::get('/sucursales', [\App\Http\Controllers\portal\SucursalesInfoController::class, 'index']);
 Route::get('/categoria/{id}', [\App\Http\Controllers\portal\CategoriasInfoController::class, 'index']);
+Route::get('/categoriaslist', [\App\Http\Controllers\portal\CategoriasInfoController::class, 'categoriaslist']);
+Route::get('/laboratorioslist', [\App\Http\Controllers\portal\LaboratoriosInfoController::class, 'laboratorioslist']);
 Route::get('/laboratorio/{id}', [\App\Http\Controllers\portal\LaboratoriosInfoController::class, 'index']);
 
 
