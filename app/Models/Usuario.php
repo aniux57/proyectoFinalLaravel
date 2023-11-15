@@ -15,6 +15,15 @@ class Usuario extends Authenticatable
     public $timestamps = false;
     protected $fillable = ['email', 'password', 'estado'];
 
+    public function getEstado()
+    {
+        if ($this -> estado == 1) {
+            return "Activo";
+        } else {
+            return "Inactivo";
+        }
+    }
+
     public function administrador(): HasOne
     {
         return $this -> hasOne(Administrador::class, 'id','id_administrador');
@@ -27,7 +36,7 @@ class Usuario extends Authenticatable
 
     public function rol(): BelongsTo
     {
-        return $this -> belongsTo(Rol::class, 'id_cliente');
+        return $this -> belongsTo(Rol::class, 'id_rol');
     }
 
     public function permiso(): HasOne

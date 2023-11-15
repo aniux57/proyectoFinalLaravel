@@ -203,18 +203,15 @@
                             <span class="hide-menu">Clientes</span>
                         </a>
                     </li>
-                </ul>
-
-                <ul id="sidebarnav" class="pt-4">
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                           href="/consola/roles"
-                           aria-expanded="false"
-                        >
-                            <i class="mdi mdi-worker"></i>
-                            <span class="hide-menu">Roles</span>
-                        </a>
-                    </li>
+<!--                    <li class="sidebar-item">-->
+<!--                        <a class="sidebar-link waves-effect waves-dark sidebar-link"-->
+<!--                           href="/consola/roles"-->
+<!--                           aria-expanded="false"-->
+<!--                        >-->
+<!--                            <i class="mdi mdi-worker"></i>-->
+<!--                            <span class="hide-menu">Roles</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            href="/consola/admins"

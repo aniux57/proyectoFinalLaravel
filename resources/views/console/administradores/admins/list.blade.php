@@ -13,13 +13,17 @@
             <thead>
                 <tr>
                     <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>estado</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($administradores as $administrador)
                     <tr>
-                        <td>{{ $administrador -> nombre }}</td>
+                        <td>{{ $administrador -> administrador -> nombre }}</td>
+                        <td>{{ $administrador -> email }}</td>
+                        <td>{{ $administrador -> getEstado() }}</td>
                         <td>
                             @component('components.console.btn_edit')
                                 @slot('controller') admins @endslot
