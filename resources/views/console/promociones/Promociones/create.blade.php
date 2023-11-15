@@ -26,6 +26,13 @@
             @endforeach
         </select>
 
+        @component('components.console.img')
+                @slot('label') Fotografia @endslot
+                @slot('name') fotografia @endslot
+                @slot('value') {{ Session::get('fotografia', '') }} @endslot
+                @slot('required') Required @endslot
+            @endcomponent
+
         <input type="submit" value="Crear">
     </form>
 @endsection
