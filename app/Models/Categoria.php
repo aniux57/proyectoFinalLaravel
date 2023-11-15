@@ -12,7 +12,7 @@ class Categoria extends Model
 
     protected $table = 'categoria';
     public $timestamps = false;
-    protected $fillable = ['nombre', 'descripcion', 'estado'];
+    protected $fillable = ['nombre', 'descripcion', 'fotografia', 'estado'];
 
     public function getEstado()
     {

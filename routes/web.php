@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\backend\ClientController;
+use App\Http\Controllers\backend\ProductController;
+use App\Http\Controllers\backend\LaboratoryController;
+use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\console\administradores\AdminsController;
 use App\Http\Controllers\console\administradores\RolesController;
 use App\Http\Controllers\console\clientes\ClientesController;
@@ -32,6 +35,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LandingPageController::class, 'index']);
 Route::get('/sucursales', [\App\Http\Controllers\portal\SucursalesInfoController::class, 'index']);
 Route::get('/categoria/{id}', [\App\Http\Controllers\portal\CategoriasInfoController::class, 'index']);
+Route::get('/categoriaslist', [\App\Http\Controllers\portal\CategoriasInfoController::class, 'categoriaslist']);
+Route::get('/laboratorioslist', [\App\Http\Controllers\portal\LaboratoriosInfoController::class, 'laboratorioslist']);
 Route::get('/laboratorio/{id}', [\App\Http\Controllers\portal\LaboratoriosInfoController::class, 'index']);
 
 
@@ -58,4 +63,11 @@ Route::prefix('consola/')->group(function ()
 Route::prefix('backend/') -> group(function ()
 {
     Route::post('register', [ClientController::class, 'register']);
+    Route::get('products', [ProductController::class, 'list']);
+    Route::get('product', [ProductController::class, 'detail']);
+    Route::get('labs', [LaboratoryController::class, 'list']);
+    Route::get('productsLab', [LaboratoryController::class, 'productsList']);
+    Route::get('categories', [CategoryController::class, 'list']);
+    Route::get('productsCat', [CategoryController::class, 'productsList']);
+
 });

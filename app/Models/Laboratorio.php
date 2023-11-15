@@ -12,7 +12,7 @@ class Laboratorio extends Model
 
     protected $table = 'laboratorio';
     public $timestamps = false;
-    protected $fillable = ['nombre', 'descripcion', 'estado'];
+    protected $fillable = ['nombre', 'descripcion', 'fotografia', 'estado'];
 
     public function getEstado()
     {

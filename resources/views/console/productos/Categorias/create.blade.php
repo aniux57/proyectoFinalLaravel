@@ -25,6 +25,13 @@
                 @slot('required') @endslot
             @endcomponent
 
+            @component('components.console.img')
+                @slot('label') Fotografia @endslot
+                @slot('name') fotografia @endslot
+                @slot('value') {{ Session::get('fotografia', '') }} @endslot
+                @slot('required') Required @endslot
+            @endcomponent
+
             @component('components.console.btn_create') @endcomponent
         </form>
     </div>
