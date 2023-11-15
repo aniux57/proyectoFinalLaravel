@@ -76,17 +76,12 @@ class SecurityController extends Controller
 
     public function save(Request $request)
     {
-        $correo =  $request -> input('correo');
+        $correo =  $request -> input('email');
         $usuario = Usuario::where('email', '=', $correo) -> first();
 
         if ($usuario == null) {
             $cliente = new Cliente();
             $cliente -> nombres = $request -> input('nombres');
-            $cliente -> recibir_noticias = $request -> input('recibir_noticias');
-            $cliente -> recibir_promociones = $request -> input('recibir_promociones');
-            $cliente -> recibir_fav_categoria = $request -> input('recibir_fav_categoria');
-            $cliente -> recibir_fav_laboratorio = $request -> input('recibir_fav_laboratorio');
-            $cliente -> recibir_fav_producto = $request -> input('recibir_fav_producto');
             $cliente -> save();
 
             $usuario = new usuario();
@@ -95,15 +90,11 @@ class SecurityController extends Controller
             $usuario -> id_cliente = $cliente -> id;
             $usuario -> save();
 
-            return response() -> json([
-                'successful' => true,
-                'message' => 'Cliente creado exitosamente.'
-            ], 200);
+            return redirect() -> route('home');
         } else {
-            return response() -> json([
-                'successful' => false,
-                'message' => 'El correo que se desea utilizar ya se encuentra registrado en el sistema.'
-            ], 200);
+            return redirect() -> route('register')
+                -> with('message', 'Todos los datos son requeridos.')
+                -> with('alert-class', 'alert-danger');
         }
     }
 
