@@ -62,7 +62,7 @@
                                 <p class="text-muted">Get your free velzon account now</p>
                             </div>
                             <div class="p-2 mt-4">
-                                <form class="needs-validation" novalidate action="index.html">
+                                <form class="needs-validation" novalidate method="post" action="/save">
                                     <div class="mb-3">
                                         <label for="nombres" class="form-label">Nombre <span class="text-danger">*</span></label>
                                         <input
@@ -89,8 +89,13 @@
                                     <div class="mb-3">
                                         <label class="form-label" for="password-input">Password</label>
                                         <div class="position-relative auth-pass-inputgroup">
-                                            <input type="password" class="form-control pe-5 password-input" onpaste="return false" placeholder="Enter password" id="password-input" aria-describedby="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-                                            <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
+                                            <input
+                                                type="password" class="form-control pe-5 password-input" onpaste="return false"
+                                                placeholder="Enter password" id="password-input" aria-describedby="passwordInput" required>
+                                            <button
+                                                class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                                                type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i>
+                                            </button>
                                             <div class="invalid-feedback">
                                                 Please enter password
                                             </div>
