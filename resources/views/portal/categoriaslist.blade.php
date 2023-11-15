@@ -27,7 +27,7 @@
                         <div class="single-featured">
                             <div class="singl-top position-relative">   
                                 <div class="feet-img">
-                                    <img src="/images/{{ $categoria -> imagen }}" alt="">
+                                    <img src="/images/{{ $categoria -> fotografia }}" alt="">
                                 </div>
                                 <a class="love" href="#"><i class="far fa-heart"></i></a>
                                 <div class="fetured-btn"><a href="/categoria/{{ $categoria -> id }}" class="@yield('categoria')">Ver Productos</a></div>
