@@ -38,6 +38,6 @@ class ProductController extends Controller
             'successful' => false,
             'message' => 'No existe el producto'
             ], 200);
-            }
+        }
     }
 }
